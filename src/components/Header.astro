@@ -72,7 +72,7 @@ const { store, navigation } = siteConfig;
           <img
             src={store.logo || "/images/logo.png"}
             alt={store.nameEn}
-            class="h-7 sm:h-8 lg:h-9 w-auto max-w-[190px] sm:max-w-[240px] lg:max-w-[280px] object-contain transition-transform duration-300 group-hover:scale-102 drop-shadow-sm"
+            class="h-7 sm:h-8 lg:h-9 w-auto max-w-[190px] sm:max-w-[240px] lg:max-w-[280px] object-contain transition-all duration-300 group-hover:scale-102 drop-shadow-sm brightness-0 invert"
             id="main-logo-img"
           />
         </a>
@@ -208,8 +208,7 @@ const { store, navigation } = siteConfig;
 <script is:inline>
   const headerWrapper = document.getElementById('header-wrapper');
   const announcementBar = document.getElementById('announcement-bar');
-  const logoTitle = document.getElementById('logo-title');
-  const logoSubtitle = document.getElementById('logo-subtitle');
+  const mainLogoImg = document.getElementById('main-logo-img');
   const desktopNav = document.getElementById('desktop-nav');
   const contactBtn = document.getElementById('contact-btn');
   const mobileToggle = document.getElementById('mobile-menu-toggle');
@@ -226,11 +225,9 @@ const { store, navigation } = siteConfig;
     headerWrapper.classList.add('text-cream-50', 'bg-transparent');
     headerWrapper.classList.remove('text-noir-900', 'bg-cream-50/95', 'backdrop-blur-md', 'shadow-sm');
 
-    logoTitle?.classList.add('text-cream-50');
-    logoTitle?.classList.remove('text-noir-900');
-
-    logoSubtitle?.classList.add('text-cream-200');
-    logoSubtitle?.classList.remove('text-stone-500');
+    if (mainLogoImg) {
+      mainLogoImg.classList.add('brightness-0', 'invert');
+    }
 
     desktopNav.classList.add('text-cream-100');
     desktopNav.classList.remove('text-stone-700');
@@ -254,11 +251,9 @@ const { store, navigation } = siteConfig;
     headerWrapper.classList.remove('text-cream-50', 'bg-transparent');
     headerWrapper.classList.add('text-noir-900', 'bg-cream-50/95', 'backdrop-blur-md', 'shadow-sm');
 
-    logoTitle?.classList.remove('text-cream-50');
-    logoTitle?.classList.add('text-noir-900');
-
-    logoSubtitle?.classList.remove('text-cream-200');
-    logoSubtitle?.classList.add('text-stone-500');
+    if (mainLogoImg) {
+      mainLogoImg.classList.remove('brightness-0', 'invert');
+    }
 
     desktopNav.classList.remove('text-cream-100');
     desktopNav.classList.add('text-stone-700');
