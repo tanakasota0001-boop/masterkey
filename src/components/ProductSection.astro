@@ -8,11 +8,11 @@ const { menu } = siteConfig.content;
   <div class="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-10 scroll-fade-in">
     <!-- Header -->
     <div class="text-center max-w-3xl mx-auto space-y-3 mb-16 sm:mb-20">
-      <span class="text-xs font-sans tracking-mega-wide uppercase text-gold-600 block">{menu.badge}</span>
+      <span class="text-xs font-sans tracking-mega-wide uppercase text-orange-600 block">{menu.badge}</span>
       <h2 class="text-3xl sm:text-5xl lg:text-6xl font-serif-title tracking-ultra-wide font-light uppercase">
         {menu.titleEn}
       </h2>
-      <div class="w-12 h-[1px] bg-gold-400 mx-auto"></div>
+      <div class="w-12 h-[1px] bg-orange-400 mx-auto"></div>
       <p class="font-serif-jp text-sm sm:text-base text-stone-600 tracking-widest pt-2">
         {menu.subtitleJa}
       </p>
@@ -35,7 +35,7 @@ const { menu } = siteConfig.content;
     </div>
 
     <!-- Products Grid (Image-centric, 2 cols on mobile, 4 cols on large screens) -->
-    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 sm:gap-x-4 lg:gap-x-5 gap-y-6 sm:gap-y-10 lg:gap-y-12" id="products-grid">
+    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-2 sm:gap-x-2.5 lg:gap-3 gap-y-4 sm:gap-y-6 lg:gap-y-8" id="products-grid">
       {products.map(product => (
         <div
           class="product-item group cursor-pointer flex flex-col"
@@ -44,7 +44,7 @@ const { menu } = siteConfig.content;
           onclick={`openProductModal('${product.id}')`}
         >
           <!-- Portrait Image Thumbnail -->
-          <div class="relative aspect-[3/4] sm:aspect-[4/5] lg:aspect-[3/4] overflow-hidden bg-stone-100 mb-2.5 sm:mb-3.5">
+          <div class="relative aspect-[3/4] sm:aspect-[4/5] lg:aspect-[3/4] overflow-hidden bg-stone-100 mb-2 sm:mb-2.5">
             <img
               src={product.image}
               alt={product.name}
@@ -62,7 +62,7 @@ const { menu } = siteConfig.content;
 
           <!-- Minimalist Info Below Image (Name & Price Only, Compact & Refined) -->
           <div class="flex justify-between items-baseline gap-2 sm:gap-3 pt-1">
-            <h3 class="min-w-0 flex-1 text-xs sm:text-base font-serif-jp text-stone-900 group-hover:text-gold-600 transition-colors font-medium truncate">
+            <h3 class="min-w-0 flex-1 text-xs sm:text-base font-serif-jp text-stone-900 group-hover:text-orange-600 transition-colors font-medium truncate">
               {product.name}
             </h3>
             <span class="text-xs sm:text-sm font-sans font-medium text-stone-700 tracking-wider flex-shrink-0">
@@ -90,31 +90,20 @@ const { menu } = siteConfig.content;
     onclick="closeProductModal()"
   ></div>
 
-  <!-- Screen Fixed Close Button -->
-  <button
-    type="button"
-    onclick="closeProductModal()"
-    class="fixed top-4 right-4 sm:top-6 sm:right-6 z-50 flex items-center gap-2 px-4 py-2 bg-cream-50/95 hover:bg-noir-900 hover:text-cream-50 text-stone-900 text-xs font-sans tracking-widest uppercase rounded-full shadow-2xl transition-all duration-200 border border-stone-300 group"
-    aria-label={menu.closeButtonText}
-  >
-    <svg class="w-4 h-4 group-hover:rotate-90 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-    <span class="font-medium">{menu.closeButtonText}</span>
-  </button>
-
   <!-- Modal Container -->
   <div class="min-h-full flex items-center justify-center p-4 sm:p-6 text-center">
     <div
       id="product-modal-card"
-      class="relative bg-cream-50 max-w-3xl w-full text-left rounded-sm shadow-2xl border border-stone-300 overflow-hidden flex flex-col md:flex-row my-8 z-10"
+      class="relative bg-cream-50 max-w-3xl w-full text-left rounded-sm shadow-2xl overflow-hidden flex flex-col md:flex-row my-8 z-10"
       onclick="event.stopPropagation()"
     >
       <!-- Modal Image -->
-      <div class="md:w-1/2 aspect-square md:aspect-auto relative bg-stone-200">
+      <div class="md:w-1/2 aspect-square md:aspect-auto relative bg-noir-900 overflow-hidden">
         <img
           id="modal-image"
           src=""
           alt=""
-          class="w-full h-full object-cover min-h-[300px]"
+          class="w-full h-full object-cover min-h-[300px] border-0 outline-none"
         />
       </div>
 
@@ -122,7 +111,7 @@ const { menu } = siteConfig.content;
       <div class="p-6 sm:p-8 md:w-1/2 flex flex-col justify-between space-y-6">
         <div class="space-y-4">
           <div>
-            <span id="modal-category" class="text-[11px] font-sans tracking-ultra-wide uppercase text-gold-600 block mb-1"></span>
+            <span id="modal-category" class="text-[11px] font-sans tracking-ultra-wide uppercase text-orange-600 block mb-1"></span>
             <h3 id="modal-title" class="text-2xl font-serif-jp text-noir-900 font-medium leading-snug"></h3>
           </div>
 
@@ -140,7 +129,7 @@ const { menu } = siteConfig.content;
           <button
             type="button"
             onclick="closeProductModal()"
-            class="w-full py-2.5 bg-noir-900 text-cream-50 hover:bg-gold-600 text-xs font-sans tracking-widest uppercase transition-colors rounded-sm text-center font-medium shadow-sm"
+            class="w-full py-2.5 bg-orange-600 hover:bg-orange-700 text-white text-xs font-sans tracking-widest uppercase transition-colors rounded-sm text-center font-medium shadow-md"
           >
             {menu.closeButtonText}
           </button>
@@ -223,8 +212,8 @@ const { menu } = siteConfig.content;
 
   @media (hover: hover) and (pointer: fine) {
     .cat-tab:not(.cat-tab-active):hover {
-      border-color: #bd5500; /* border-gold-600 */
-      color: #bd5500; /* text-gold-600 */
+      border-color: #eb4b00; /* border-orange-600 */
+      color: #eb4b00; /* text-orange-600 */
     }
   }
 

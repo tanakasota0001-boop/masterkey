@@ -8,11 +8,11 @@ const { store: storeText } = siteConfig.content;
   <div class="max-w-[1240px] mx-auto px-6 sm:px-8 lg:px-12 scroll-fade-in">
     <!-- Header -->
     <div class="text-center max-w-3xl mx-auto space-y-3 mb-12 sm:mb-16">
-      <span class="text-xs font-sans tracking-mega-wide uppercase text-gold-600 block">{storeText.badge}</span>
+      <span class="text-xs font-sans tracking-mega-wide uppercase text-orange-600 block">{storeText.badge}</span>
       <h2 class="text-3xl sm:text-5xl lg:text-6xl font-serif-title tracking-ultra-wide font-light uppercase">
         {storeText.titleEn}
       </h2>
-      <div class="w-12 h-[1px] bg-gold-400 mx-auto"></div>
+      <div class="w-12 h-[1px] bg-orange-400 mx-auto"></div>
     </div>
 
     <!-- Store Layout: Unified Store Info & Calendar on Left, Map on Right -->
@@ -31,37 +31,37 @@ const { store: storeText } = siteConfig.content;
         <!-- Middle: Key Details Grid -->
         <dl class="py-5 divide-y divide-stone-200/60 text-sm sm:text-base font-serif-jp space-y-0">
           <div class="py-3 grid grid-cols-3 gap-2">
-            <dt class="text-stone-500 font-sans tracking-wider uppercase text-xs sm:text-sm font-medium">{storeText.tableLabels.address}</dt>
+            <dt class="text-stone-700 font-sans tracking-wider uppercase text-xs sm:text-sm font-semibold">{storeText.tableLabels.address}</dt>
             <dd class="col-span-2 text-stone-900 font-normal text-sm sm:text-base">
               〒{store.postalCode} {store.address}
             </dd>
           </div>
           <div class="py-3 grid grid-cols-3 gap-2">
-            <dt class="text-stone-500 font-sans tracking-wider uppercase text-xs sm:text-sm font-medium">{storeText.tableLabels.tel}</dt>
+            <dt class="text-stone-700 font-sans tracking-wider uppercase text-xs sm:text-sm font-semibold">{storeText.tableLabels.tel}</dt>
             <dd class="col-span-2 text-stone-900 font-normal text-sm sm:text-base">
-              <a href={`tel:${store.tel.replace(/-/g, '')}`} class="hover:text-gold-600 transition-colors">
+              <a href={`tel:${store.tel.replace(/-/g, '')}`} class="hover:text-orange-600 transition-colors">
                 {store.tel}
               </a>
             </dd>
           </div>
           <div class="py-3 grid grid-cols-3 gap-2">
-            <dt class="text-stone-500 font-sans tracking-wider uppercase text-xs sm:text-sm font-medium">{storeText.tableLabels.hours}</dt>
+            <dt class="text-stone-700 font-sans tracking-wider uppercase text-xs sm:text-sm font-semibold">{storeText.tableLabels.hours}</dt>
             <dd class="col-span-2 text-stone-900 font-normal text-sm sm:text-base">
               <span>{store.businessHours}</span>
               <span class="text-xs sm:text-sm text-stone-500 ml-1.5">（{store.holidays}定休）</span>
             </dd>
           </div>
           <div class="py-3 grid grid-cols-3 gap-2">
-            <dt class="text-stone-500 font-sans tracking-wider uppercase text-xs sm:text-sm font-medium">{storeText.tableLabels.access}</dt>
+            <dt class="text-stone-700 font-sans tracking-wider uppercase text-xs sm:text-sm font-semibold">{storeText.tableLabels.access}</dt>
             <dd class="col-span-2 text-stone-900 font-normal text-xs sm:text-sm space-y-1">
               {store.accessList.map(item => (
-                <p>• {item}</p>
+                <p>{item}</p>
               ))}
             </dd>
           </div>
           {store.parking && (
             <div class="py-3 grid grid-cols-3 gap-2">
-              <dt class="text-stone-500 font-sans tracking-wider uppercase text-xs sm:text-sm font-medium">{storeText.tableLabels.parking}</dt>
+              <dt class="text-stone-700 font-sans tracking-wider uppercase text-xs sm:text-sm font-semibold">{storeText.tableLabels.parking}</dt>
               <dd class="col-span-2 text-stone-900 font-normal text-sm sm:text-base">
                 {store.parking}
               </dd>
@@ -114,7 +114,7 @@ const { store: storeText } = siteConfig.content;
                 <span>{storeText.legendHoliday}</span>
               </div>
               <div class="flex items-center gap-1.5">
-                <span class="w-3 h-3 rounded-full bg-gold-400/30 border border-gold-500"></span>
+                <span class="w-3 h-3 rounded-full bg-orange-400/30 border border-orange-500"></span>
                 <span>{storeText.legendToday}</span>
               </div>
             </div>
@@ -143,7 +143,7 @@ const { store: storeText } = siteConfig.content;
               href={store.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-1.5 text-xs font-serif-jp text-stone-600 hover:text-gold-600 transition-colors"
+              class="inline-flex items-center gap-1.5 text-xs font-serif-jp text-stone-600 hover:text-orange-600 transition-colors"
             >
               <span>Google マップでルート・詳細を見る</span>
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
@@ -223,7 +223,7 @@ const { store: storeText } = siteConfig.content;
       let cellClass = 'h-9 flex flex-col items-center justify-center rounded-sm transition-colors text-xs ';
 
       if (isCurrentDay) {
-        cellClass += 'ring-1 ring-gold-500 font-bold bg-gold-400/10 ';
+        cellClass += 'ring-1 ring-orange-500 font-bold bg-orange-400/10 ';
       }
 
       if (isHoliday) {

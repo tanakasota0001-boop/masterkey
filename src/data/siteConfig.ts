@@ -57,7 +57,7 @@ export const siteConfig = {
       { id: "concept", labelEn: "Concept", labelJa: "こだわり", href: "#concept" },
       { id: "collection", labelEn: "Menu", labelJa: "商品一覧", href: "#collection" },
       { id: "specialty", labelEn: "Specialité", labelJa: "オーダーメイド", href: "#specialty" },
-      { id: "about", labelEn: "Chef & Story", labelJa: "職人の想い", href: "#about" },
+      { id: "about", labelEn: "Chef", labelJa: "職人の想い", href: "#about" },
       { id: "store", labelEn: "Store", labelJa: "店舗情報", href: "#store" },
       { id: "news", labelEn: "News", labelJa: "お知らせ", href: "#news" }
     ],
@@ -73,15 +73,15 @@ export const siteConfig = {
     heroSlides: [
       {
         url: "/images/hero/01.jpg",
-        subTitle: "House Specialité",
-        title: "心も別腹も満たす、\n極上のナポレオンパイ。",
-        tag: "Napoleon Pie"
+        subTitle: "save room for dessert",
+        title: "甘いものは別腹\n心ほどける特別なスイーツを",
+        tag: "Patisserie & Sweets"
       },
       {
         url: "/images/hero/002.jpg",
-        subTitle: "Celebration & Memory",
-        title: "分け合うおいしさ、\n分かち合うしあわせのケーキ。",
-        tag: "Anniversary Cake"
+        subTitle: "House Specialité",
+        title: "心も別腹も満たす\n極上のナポレオンパイ",
+        tag: "Napoleon Pie"
       }
     ],
 
@@ -112,9 +112,9 @@ export const siteConfig = {
         },
         {
           id: "gateau-chocolat",
-          title: "GATEAU CHOCOLAT",
-          subTitle: "ガトーショコラ",
-          desc: "上質なクーベルチュールの深いコクとアロマが広がる大人のための記念日ショコラケーキ。",
+          title: "2026 Mother's Day Special",
+          subTitle: "2026 母の日 苺ショートケーキSP",
+          desc: "",
           image: "/images/specialite/004.jpg",
           aspect: "standard"
         },
@@ -128,8 +128,8 @@ export const siteConfig = {
         },
         {
           id: "hina-strawberry-cake",
-          title: "HINA ICHIGO DECORATION",
-          subTitle: "ひな祭り苺デコレーション 2026",
+          title: "STRAWBERRY SHORTCAKE SP",
+          subTitle: "苺のショートケーキSPモデル",
           desc: "",
           image: "/images/specialite/005.jpg",
           aspect: "standard"
@@ -154,28 +154,19 @@ export const siteConfig = {
     // Instagramギャラリー写真（分け合うおいしさ・分かち合うしあわせセクションと同一画像）
     gallery: [
       {
-        url: "/images/specialite/001.jpg",
-        caption: "2025 クリスマスケーキ"
+        url: "/images/gallery/001.jpg"
       },
       {
-        url: "/images/specialite/002.jpg",
-        caption: "2025 クリスマスケーキ"
+        url: "/images/gallery/003.jpg",
       },
       {
-        url: "/images/specialite/004.jpg",
-        caption: "ガトーショコラ"
+        url: "/images/gallery/002.jpg",
       },
       {
-        url: "/images/specialite/003.jpg",
-        caption: "デコレーションケーキ"
+        url: "/images/gallery/004.jpg"
       },
       {
-        url: "/images/specialite/005.jpg",
-        caption: "ひな祭り苺デコレーション 2026"
-      },
-      {
-        url: "/images/specialite/006.jpg",
-        caption: "フルーツタルト"
+        url: "/images/gallery/005.jpg"
       }
     ]
   },
@@ -188,12 +179,12 @@ export const siteConfig = {
     concept: {
       badge: "こだわり",
       titleEn: "Concept",
-      subtitleJa: "心も別腹も満たす。分け合うおいしさ、分かち合うしあわせ。",
-      lead: "すべてのお客さまの心のカギになるスイーツを。",
+      subtitleJa: "心も別腹も満たす、分け合うおいしさと分かち合うしあわせ。",
+      lead: "すべてのお客さまの\n心のカギになるスイーツを",
       paragraphs: [
-        "店名「MASTER KEY（マスターキー）」には、“すべてのお客さまの心のカギになる”という温かい願いを込めています。イメージカラーのオレンジ色は、果物の「ミカン＝未完」から。初心を忘れることなく、常に向上心とチャレンジ精神を持って菓子づくりと向き合っています。",
-        "サブタイトルの「save room for dessert」は、“甘いものは別腹。気にせず気軽に楽しんでほしい”という想い。ケーキが切り分けられたようなロゴマークは「分け合うおいしさ・分かち合うしあわせ」を象徴しています。",
-        "木目を基調とした温もりあふれる店内には、お子さまがのぞき込める鍵型の小窓など遊び心もたっぷり。記念日やお祝いはもちろん、日常のちょっとしたご褒美にも、笑顔をお届けします。"
+        "店名「MASTER KEY（マスターキー）」には、“すべてのお客さまの心のカギになる”という温かい願いを込めています。\nイメージカラーのオレンジ色は「ミカン＝未完」から。初心を忘れることなく、常に向上心と探求心を持って菓子づくりに向き合っています。",
+        "サブタイトルの「save room for dessert」は、“甘いものは別腹。気にせず気軽に楽しんでほしい”という想い。\nケーキを切り分けたようなロゴマークには、「分け合うおいしさ・分かち合うしあわせ」への願いを込めました。",
+        "木目を基調とした温もりあふれるアトリエには、お子さまが厨房をのぞき込める鍵型の小窓など遊び心もたっぷり。\n特別な記念日のお祝いから日常のささやかなご褒美まで、ひと口で笑顔になれるお菓子をお届けします。"
       ],
       promisesTitle: "Our 3 Commitments",
       promises: [
@@ -221,9 +212,9 @@ export const siteConfig = {
       titleEn: "Custom Cakes",
       subtitleJa: "特別な記念日やお祝いを彩る、繊細なデザインのホールケーキ",
       heading: "分け合うおいしさ\n分かち合うしあわせ",
-      desc: "誕生日、記念日、ウェディング、季節のお祝いに。東京の有名ホテルで腕を磨いたパティシエが、デザイン性と美味しさを兼ね備えた特別なホールケーキをお仕立てします。お客様のご希望のテーマやご用途に合わせて、ひとつひとつ心を込めてお作りいたします。",
-      tags: ["# ホールケーキ", "# アニバーサリー", "# 誕生日ケーキ", "# オーダーメイド", "# 記念日"],
-      catalogBtn: "お電話でのご予約について",
+      desc: "お誕生日や記念日、大切な人とお祝いするかけがえのない日に。\n\n東京・帝国ホテルで研鑽を積んだパティシエが、口どけの良い純生クリームと厳選した旬の果実を贅沢に重ね、華やかさと美味しさを極めた特別なケーキをお仕立てします。\n\nご希望のテーマやご用途に合わせて、ひとつひとつ心を込めて丁寧にお作りいたします。",
+      tags: ["# ホールケーキ", "# アニバーサリー", "# 誕生日ケーキ", "# オーダーメイド"],
+      catalogBtn: "電話で予約する",
       reservationNotice: "※ホールケーキ・オーダーメイドのご予約はお電話のみにて承っております。",
       hoverBadge: "詳細を見る",
       menuLink: "商品ラインナップを見る"
@@ -245,13 +236,13 @@ export const siteConfig = {
     // --- シェフ・工房セクション (About) ---
     about: {
       badge: "シェフの想い",
-      titleEn: "Chef & Story",
-      subtitleJa: "男女年齢問わず、誰にでも愛されるスイーツを届けていきたい。",
+      titleEn: "Chef",
+      subtitleJa: "世代を超えて、誰からも愛される温かなスイーツを。",
       paragraphs: [
-        "東京の「帝国ホテル」で14年間にわたりパティシエとしての腕を磨き、その後長野県松本市・上高地の有名ホテルを経て、2013年4月に夫婦で松本市出川に「original sweets MASTER KEY」をオープンいたしました。",
-        "約10年間、地域の皆さまに支えていただきながら歩みを続け、2024年1月27日、妻の地元である塩尻市広丘野村へ「save room for dessert MASTER KEY」として移転リニューアルオープンを迎えました。",
-        "「男女年齢問わず、誰にでも愛される商品」をモットーに、基本となる卵やバター、粉の選定から温度・焼き加減まで妥協せず、毎日心を込めて焼き上げています。",
-        "「心も別腹も満たすケーキをご提供します！」 大切な人とケーキを囲む時間に、温かなしあわせが灯りますように。"
+        "東京・帝国ホテルで14年間にわたりパティシエとしての腕を磨き、信州の地へ。2013年、松本市出川にて夫婦ふたりで「MASTER KEY」を開店いたしました。",
+        "地域の皆さまに温かく支えていただいた10年の歩みを経て、2024年1月、妻の地元である塩尻市広丘野村へ「save room for dessert MASTER KEY」として移転リニューアルオープンいたしました。",
+        "大切にしているのは、「世代や性別を問わず、ひと口で笑顔になれるお菓子」。\n卵や発酵バター、小麦粉といった基本素材の選定から、繊細な温度管理や焼き加減まで妥協せず、毎日ひとつひとつ心を込めて焼き上げています。",
+        "「甘いものは別腹」の言葉通り、心も別腹も満たされる至福のひとときを。\n大切な人とケーキを囲む特別な時間に、温かなしあわせが灯りますように。"
       ],
       chefTitle: "オーナーパティシエ",
       chefName: "堀内 健介",

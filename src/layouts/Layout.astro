@@ -40,25 +40,30 @@ const {
       :root {
         --color-cream-bg: #faf8f5;
         --color-noir: #181716;
-        --color-gold: #e16c02;
+        --color-orange: #eb4b00;
+        --color-brand: #eb4b00;
       }
       
+      html,
       body {
+        max-width: 100%;
+        overflow-x: hidden;
+        position: relative;
         background-color: var(--color-cream-bg);
         color: var(--color-noir);
         font-family: 'Montserrat', 'Shippori Mincho', serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        overflow-x: hidden;
       }
 
       ::selection {
-        background-color: #dfd7c4;
+        background-color: #ffc4a8;
         color: #181716;
       }
 
+      /* Custom scrollbar styling */
       ::-webkit-scrollbar {
-        width: 6px;
+        width: 8px;
       }
       ::-webkit-scrollbar-track {
         background: #f6f3eb;
@@ -68,7 +73,7 @@ const {
         border-radius: 3px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #bd5500;
+        background: #eb4b00;
       }
 
       .font-serif-title {
@@ -84,7 +89,7 @@ const {
       }
     </style>
   </head>
-  <body class="selection:bg-gold-300 selection:text-noir-900">
+  <body class="selection:bg-orange-300 selection:text-noir-900">
     <slot />
   </body>
 </html>

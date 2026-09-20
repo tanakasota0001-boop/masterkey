@@ -3,7 +3,7 @@ import { siteConfig } from '../data/siteConfig';
 const { heroSlides } = siteConfig.images;
 ---
 
-<section class="relative h-screen min-h-[640px] max-h-[960px] w-full overflow-hidden bg-noir-950">
+<section id="hero" class="relative h-[100svh] min-h-[520px] sm:min-h-[640px] max-h-[1080px] w-full overflow-hidden bg-noir-950 select-none">
   <!-- Slides Background Container -->
   <div id="hero-slider" class="absolute inset-0 w-full h-full">
     {heroSlides.map((slide, index) => (
@@ -13,49 +13,198 @@ const { heroSlides } = siteConfig.images;
         }`}
         data-slide-index={index}
       >
-        <!-- Background Image with subtle zoom effect -->
+        <!-- Background Image with smooth zoom effect -->
         <div class="absolute inset-0 overflow-hidden">
           <img
             src={slide.url}
-            alt="save room for dessert MASTER KEY"
-            class="w-full h-full object-cover object-center scale-105 transition-transform duration-[8000ms] ease-out transform hero-bg-img"
+            alt={slide.title || "save room for dessert MASTER KEY"}
+            class={`w-full h-full object-cover scale-105 transition-transform duration-[7000ms] ease-out transform hero-bg-img ${
+              index === 1 ? 'object-[85%_center] sm:object-center' : 'object-center'
+            }`}
           />
-          <div class="absolute inset-0 bg-gradient-to-t from-noir-950/60 via-noir-950/15 to-noir-950/30"></div>
+          <!-- Gradient Overlay for optimal contrast with header and bottom elements -->
+          <div class="absolute inset-0 bg-gradient-to-t from-noir-950/80 via-noir-950/25 to-noir-950/45"></div>
         </div>
       </div>
     ))}
   </div>
 
+  <!-- Hero Content / Synchronized Slide Catchcopy -->
+  <div class="absolute inset-0 z-20 flex flex-col justify-end pb-12 sm:pb-16 px-6 sm:px-8 lg:px-12 max-w-[1560px] mx-auto pointer-events-none">
+    <div class="space-y-2 sm:space-y-3 pointer-events-auto max-w-2xl min-h-[120px] sm:min-h-[140px] flex flex-col justify-end">
+      {heroSlides.map((slide, index) => (
+        <div
+          class={`hero-text-item transition-all duration-700 ease-out ${
+            index === 0 ? 'opacity-100 translate-y-0 block' : 'opacity-0 translate-y-4 hidden pointer-events-none'
+          }`}
+          data-text-index={index}
+        >
+          <span class="text-xs sm:text-sm font-sans tracking-mega-wide uppercase text-orange-400 font-semibold drop-shadow-md block mb-1">
+            {slide.subTitle || siteConfig.store.subtitle}
+          </span>
+          <h1 class="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-serif-jp text-cream-50 font-light tracking-wider leading-snug sm:leading-tight drop-shadow-lg max-w-full">
+            {(slide.title || siteConfig.store.tagline).split('\n').map((line: string) => (
+              <span class="block whitespace-nowrap overflow-hidden text-ellipsis max-w-full">{line}</span>
+            ))}
+          </h1>
+        </div>
+      ))}
+    </div>
+
+    <!-- Slide Indicators & Controls Bar -->
+    <div class="mt-6 sm:mt-8 flex justify-between items-end pointer-events-auto">
+      <!-- Dots / Bars + Navigation Arrows -->
+      <div class="flex items-center space-x-3 sm:space-x-4">
+        <!-- Prev Arrow -->
+        <button
+          type="button"
+          id="hero-prev-btn"
+          class="p-1 text-white/70 hover:text-orange-400 transition-colors focus:outline-none"
+          aria-label="前のスライド"
+        >
+          <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+
+        <!-- Dots -->
+        <div class="flex items-center space-x-2">
+          {heroSlides.map((_, idx) => (
+            <button
+              type="button"
+              class={`hero-dot h-1.5 rounded-full transition-all duration-500 ${idx === 0 ? 'w-8 bg-orange-500' : 'w-2 bg-white/40 hover:bg-white/70'}`}
+              data-index={idx}
+              onclick={`window.__goToSlide(${idx})`}
+              aria-label={`スライド ${idx + 1} を表示`}
+            ></button>
+          ))}
+        </div>
+
+        <!-- Next Arrow -->
+        <button
+          type="button"
+          id="hero-next-btn"
+          class="p-1 text-white/70 hover:text-orange-400 transition-colors focus:outline-none"
+          aria-label="次のスライド"
+        >
+          <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <a href="#concept" class="inline-flex items-center gap-2 text-[11px] font-sans tracking-widest uppercase text-cream-100/80 hover:text-orange-400 transition-colors">
+        <span>SCROLL</span>
+        <svg class="w-3.5 h-3.5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+      </a>
+    </div>
+  </div>
 </section>
 
 <script is:inline>
-  let currentSlide = 0;
-  const slides = document.querySelectorAll('.hero-slide');
-  const totalSlides = slides.length;
-  let slideInterval;
+  (function initHeroSlider() {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.hero-slide');
+    const texts = document.querySelectorAll('.hero-text-item');
+    const dots = document.querySelectorAll('.hero-dot');
+    const totalSlides = slides.length;
+    let slideInterval;
 
-  function goToSlide(index) {
-    slides[currentSlide].classList.remove('opacity-100', 'z-10');
-    slides[currentSlide].classList.add('opacity-0', 'z-0', 'pointer-events-none');
+    if (!totalSlides) return;
 
-    currentSlide = (index + totalSlides) % totalSlides;
+    function updateDots(index) {
+      dots.forEach((dot, idx) => {
+        if (idx === index) {
+          dot.classList.add('w-8', 'bg-orange-500');
+          dot.classList.remove('w-2', 'bg-white/40');
+        } else {
+          dot.classList.remove('w-8', 'bg-orange-500');
+          dot.classList.add('w-2', 'bg-white/40');
+        }
+      });
+    }
 
-    slides[currentSlide].classList.remove('opacity-0', 'z-0', 'pointer-events-none');
-    slides[currentSlide].classList.add('opacity-100', 'z-10');
-  }
+    function updateTexts(index) {
+      texts.forEach((text, idx) => {
+        if (idx === index) {
+          text.classList.remove('hidden', 'opacity-0', 'translate-y-4', 'pointer-events-none');
+          text.classList.add('block', 'opacity-100', 'translate-y-0');
+        } else {
+          text.classList.remove('block', 'opacity-100', 'translate-y-0');
+          text.classList.add('hidden', 'opacity-0', 'translate-y-4', 'pointer-events-none');
+        }
+      });
+    }
 
-  function nextSlide() {
-    goToSlide(currentSlide + 1);
-  }
+    function goToSlide(index) {
+      if (!slides.length) return;
+      slides[currentSlide].classList.remove('opacity-100', 'z-10');
+      slides[currentSlide].classList.add('opacity-0', 'z-0', 'pointer-events-none');
 
-  function startSlideTimer() {
-    stopSlideTimer();
-    slideInterval = setInterval(nextSlide, 6000);
-  }
+      currentSlide = (index + totalSlides) % totalSlides;
 
-  function stopSlideTimer() {
-    if (slideInterval) clearInterval(slideInterval);
-  }
+      slides[currentSlide].classList.remove('opacity-0', 'z-0', 'pointer-events-none');
+      slides[currentSlide].classList.add('opacity-100', 'z-10');
 
-  startSlideTimer();
+      updateDots(currentSlide);
+      updateTexts(currentSlide);
+    }
+
+    function nextSlide() {
+      goToSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      goToSlide(currentSlide - 1);
+    }
+
+    function startSlideTimer() {
+      stopSlideTimer();
+      slideInterval = setInterval(nextSlide, 4500);
+    }
+
+    function stopSlideTimer() {
+      if (slideInterval) clearInterval(slideInterval);
+    }
+
+    window.__goToSlide = function(idx) {
+      stopSlideTimer();
+      goToSlide(idx);
+      startSlideTimer();
+    };
+
+    document.getElementById('hero-prev-btn')?.addEventListener('click', () => {
+      stopSlideTimer();
+      prevSlide();
+      startSlideTimer();
+    });
+
+    document.getElementById('hero-next-btn')?.addEventListener('click', () => {
+      stopSlideTimer();
+      nextSlide();
+      startSlideTimer();
+    });
+
+    // Touch swipe support
+    const heroSection = document.getElementById('hero');
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    heroSection?.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    heroSection?.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 45) {
+        stopSlideTimer();
+        if (diff > 0) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
+        startSlideTimer();
+      }
+    }, { passive: true });
+
+    startSlideTimer();
+  })();
 </script>
