@@ -69,14 +69,12 @@ const { store, navigation } = siteConfig;
 
         <!-- Logo: Centered on mobile, Left on desktop -->
         <a href="#" class="group flex items-center focus:outline-none flex-1 lg:flex-initial py-1">
-          <div class="px-2.5 py-1 rounded-sm bg-white/90 backdrop-blur-md shadow-xs border border-stone-200/60 flex items-center transition-all duration-300 group-hover:bg-white group-hover:shadow-sm">
-            <img
-              src={store.logo || "/images/logo.png"}
-              alt={store.nameEn}
-              class="h-7 sm:h-8 lg:h-9 w-auto max-w-[190px] sm:max-w-[240px] lg:max-w-[280px] object-contain transition-transform duration-300 group-hover:scale-102"
-              id="main-logo-img"
-            />
-          </div>
+          <img
+            src={store.logo || "/images/logo.png"}
+            alt={store.nameEn}
+            class="h-7 sm:h-8 lg:h-9 w-auto max-w-[190px] sm:max-w-[240px] lg:max-w-[280px] object-contain transition-transform duration-300 group-hover:scale-102 drop-shadow-sm"
+            id="main-logo-img"
+          />
         </a>
 
         <!-- Desktop Nav -->
