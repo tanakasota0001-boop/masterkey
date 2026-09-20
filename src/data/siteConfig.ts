@@ -13,6 +13,7 @@ export const siteConfig = {
     nameEn: "save room for dessert MASTER KEY",
     nameJa: "マスターキー",
     subtitle: "Patisserie & Baked Sweets",
+    logo: "/images/logo.png",
     tagline: "心も別腹も満たす、特別なスイーツを。",
     shortConcept: "分け合うおいしさ・分かち合うしあわせ。すべてのお客さまの心のカギになる洋菓子を塩尻から。",
     description: "東京・帝国ホテルで14年間腕を磨いたパティシエが営む洋菓子店。松本市で親しまれた10年を経て、2024年に塩尻市広丘野村へ移転リニューアル。「甘いものは別腹」を合言葉に、美しく繊細なホールケーキや看板ナポレオンパイ、厳選素材の焼き菓子をお届けします。",

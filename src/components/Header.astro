@@ -68,13 +68,15 @@ const { store, navigation } = siteConfig;
         </div>
 
         <!-- Logo: Centered on mobile, Left on desktop -->
-        <a href="#" class="group flex flex-col items-center lg:items-start text-center lg:text-left focus:outline-none flex-1 lg:flex-initial">
-          <span id="logo-title" class="font-serif-title tracking-mega-wide text-lg sm:text-xl lg:text-2xl font-light transition-colors uppercase drop-shadow-sm">
-            {store.nameEn}
-          </span>
-          <span id="logo-subtitle" class="text-[10px] sm:text-[11px] tracking-ultra-wide transition-colors font-sans uppercase opacity-85">
-            {store.subtitle}
-          </span>
+        <a href="#" class="group flex items-center focus:outline-none flex-1 lg:flex-initial py-1">
+          <div class="px-2.5 py-1 rounded-sm bg-white/90 backdrop-blur-md shadow-xs border border-stone-200/60 flex items-center transition-all duration-300 group-hover:bg-white group-hover:shadow-sm">
+            <img
+              src={store.logo || "/images/logo.png"}
+              alt={store.nameEn}
+              class="h-7 sm:h-8 lg:h-9 w-auto max-w-[190px] sm:max-w-[240px] lg:max-w-[280px] object-contain transition-transform duration-300 group-hover:scale-102"
+              id="main-logo-img"
+            />
+          </div>
         </a>
 
         <!-- Desktop Nav -->
@@ -144,13 +146,12 @@ const { store, navigation } = siteConfig;
     </div>
 
     <!-- Center Logo -->
-    <a href="#" onclick="closeMobileMenu()" class="group flex flex-col items-center text-center focus:outline-none flex-1">
-      <span class="font-serif-title tracking-mega-wide text-lg sm:text-xl font-light text-stone-900 uppercase">
-        {store.nameEn}
-      </span>
-      <span class="text-[10px] sm:text-[11px] tracking-ultra-wide text-stone-500 font-sans uppercase">
-        {store.subtitle}
-      </span>
+    <a href="#" onclick="closeMobileMenu()" class="group flex items-center justify-center focus:outline-none flex-1 px-2">
+      <img
+        src={store.logo || "/images/logo.png"}
+        alt={store.nameEn}
+        class="h-7 sm:h-8 w-auto max-w-[200px] object-contain"
+      />
     </a>
 
     <!-- Instagram Icon Link -->
@@ -227,11 +228,11 @@ const { store, navigation } = siteConfig;
     headerWrapper.classList.add('text-cream-50', 'bg-transparent');
     headerWrapper.classList.remove('text-noir-900', 'bg-cream-50/95', 'backdrop-blur-md', 'shadow-sm');
 
-    logoTitle.classList.add('text-cream-50');
-    logoTitle.classList.remove('text-noir-900');
+    logoTitle?.classList.add('text-cream-50');
+    logoTitle?.classList.remove('text-noir-900');
 
-    logoSubtitle.classList.add('text-cream-200');
-    logoSubtitle.classList.remove('text-stone-500');
+    logoSubtitle?.classList.add('text-cream-200');
+    logoSubtitle?.classList.remove('text-stone-500');
 
     desktopNav.classList.add('text-cream-100');
     desktopNav.classList.remove('text-stone-700');
@@ -255,11 +256,11 @@ const { store, navigation } = siteConfig;
     headerWrapper.classList.remove('text-cream-50', 'bg-transparent');
     headerWrapper.classList.add('text-noir-900', 'bg-cream-50/95', 'backdrop-blur-md', 'shadow-sm');
 
-    logoTitle.classList.remove('text-cream-50');
-    logoTitle.classList.add('text-noir-900');
+    logoTitle?.classList.remove('text-cream-50');
+    logoTitle?.classList.add('text-noir-900');
 
-    logoSubtitle.classList.remove('text-cream-200');
-    logoSubtitle.classList.add('text-stone-500');
+    logoSubtitle?.classList.remove('text-cream-200');
+    logoSubtitle?.classList.add('text-stone-500');
 
     desktopNav.classList.remove('text-cream-100');
     desktopNav.classList.add('text-stone-700');

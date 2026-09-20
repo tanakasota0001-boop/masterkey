@@ -10,12 +10,11 @@ const { footer } = siteConfig.content;
       <!-- Brand Left -->
       <div class="md:col-span-5 space-y-4">
         <a href="#" class="inline-block group">
-          <span class="font-serif-title tracking-mega-wide text-2xl font-light text-stone-900 group-hover:text-gold-600 transition-colors uppercase block">
-            {store.nameEn}
-          </span>
-          <span class="text-[11px] tracking-ultra-wide text-stone-500 font-sans uppercase block">
-            {store.subtitle}
-          </span>
+          <img
+            src={store.logo || "/images/logo.png"}
+            alt={store.nameEn}
+            class="h-9 sm:h-10 w-auto max-w-[260px] object-contain mb-2 group-hover:opacity-90 transition-opacity"
+          />
         </a>
         <p class="text-[13px] font-serif-jp text-stone-600 leading-relaxed max-w-sm">
           {store.shortConcept}
