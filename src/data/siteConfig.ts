@@ -39,7 +39,8 @@ export const siteConfig = {
     threadsAccountName: "@sr4d.masterkey",
     xUrl: "https://x.com/original_sweets",
     xAccountName: "@original_sweets",
-    googleMapsEmbedUrl: "https://maps.google.com/maps?q=長野県塩尻市広丘野村1788-387&output=embed",
+    googleMapsUrl: "https://share.google/CiXDHRYt4PyEuizA8",
+    googleMapsEmbedUrl: "https://maps.google.com/maps?q=save+room+for+dessert+MASTER+KEY+塩尻市広丘野村1788-387&output=embed",
     copyrightYear: "2026"
   },
 
@@ -96,50 +97,50 @@ export const siteConfig = {
       items: [
         {
           id: "anniversary-hall-cake",
-          title: "ENTREMETS CÉLÉBRATION",
-          subTitle: "アニバーサリー・デコレーションケーキ",
+          title: "2025 X'mas Specialité",
+          subTitle: "2025 クリスマスケーキ",
           desc: "美しく繊細なデコレーションと軽やかな生クリーム。特別な記念日を彩る評判のホールケーキ。",
-          image: "/images/specialite/anniversary-cake.jpg",
+          image: "/images/specialite/001.jpg",
           aspect: "standard"
         },
         {
           id: "strawberry-celebration",
-          title: "STRAWBERRY DECORATION",
-          subTitle: "苺のスペシャルデコレーション",
+          title: "2025 X'mas Specialité",
+          subTitle: "2025 クリスマスケーキ",
           desc: "口どけの良い北海道産純生クリームと厳選された旬の苺を贅沢に重ねた王道のアニバーサリーケーキ。",
-          image: "/images/products/shortcake.jpg",
+          image: "/images/specialite/002.jpg",
+          aspect: "standard"
+        },
+        {
+          id: "gateau-chocolat",
+          title: "GATEAU CHOCOLAT",
+          subTitle: "ガトーショコラ",
+          desc: "上質なクーベルチュールの深いコクとアロマが広がる大人のための記念日ショコラケーキ。",
+          image: "/images/specialite/004.jpg",
           aspect: "standard"
         },
         {
           id: "custom-fruits-cake",
-          title: "SEASONAL FRUITS CREATION",
-          subTitle: "季節の彩り特製フルーツケーキ",
+          title: "DECORATION CAKE",
+          subTitle: "デコレーションケーキ",
           desc: "市場や契約農家直送の旬果実を惜しみなくあしらった、華やかでみずみずしい特注ケーキ。",
-          image: "/images/specialite/fruits-cake.jpg",
+          image: "/images/specialite/003.jpg",
           aspect: "wide"
         },
         {
-          id: "chocolate-entremets",
-          title: "CHOCOLAT ÉLÉGANCE",
-          subTitle: "ショコラ・アントルメ",
-          desc: "上質なクーベルチュールの深いコクとアロマが広がる大人のための記念日ショコラケーキ。",
-          image: "/images/specialite/chocolate-cake.jpg",
+          id: "hina-strawberry-cake",
+          title: "HINA ICHIGO DECORATION",
+          subTitle: "ひな祭り苺デコレーション 2026",
+          desc: "",
+          image: "/images/specialite/005.jpg",
           aspect: "standard"
         },
         {
-          id: "custom-design-cake",
-          title: "SPECIAL ORDER CAKE",
-          subTitle: "特注デザイン＆記念日ケーキ",
-          desc: "誕生日や感謝の集いに。お客様のご希望のテーマやお好みに合わせてひとつひとつ丁寧にお作りします。",
-          image: "/images/specialite/design-cake.jpg",
-          aspect: "standard"
-        },
-        {
-          id: "party-entremets",
-          title: "PREMIUM CELEBRATION CAKE",
-          subTitle: "ウェディング＆パーティー特注ケーキ",
-          desc: "大切な節目や大人数の集まりを華やかに彩る、職人技を凝縮した特製ホールケーキ。",
-          image: "/images/specialite/anniversary-cake.jpg",
+          id: "fruits-tarte",
+          title: "FRUITS TARTE",
+          subTitle: "フルーツタルト",
+          desc: "",
+          image: "/images/specialite/006.jpg",
           aspect: "wide"
         }
       ]
@@ -273,7 +274,7 @@ export const siteConfig = {
     // --- 店舗情報＆営業カレンダー (Store) ---
     store: {
       badge: "店舗情報",
-      titleEn: "Store Access",
+      titleEn: "STORE",
       subtitleJa: "店舗情報・営業案内・交通アクセス",
       calendarTitle: "営業カレンダー",
       legendHoliday: "定休日（月・火）",
