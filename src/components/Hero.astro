@@ -5,8 +5,8 @@ const { tagline } = siteConfig.store;
 ---
 
 <section class="relative h-screen min-h-[640px] max-h-[960px] w-full overflow-hidden bg-noir-950">
-  <!-- Slides Container -->
-  <div id="hero-slider" class="relative w-full h-full">
+  <!-- Slides Background Container -->
+  <div id="hero-slider" class="absolute inset-0 w-full h-full">
     {heroSlides.map((slide, index) => (
       <div
         class={`hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out ${
@@ -18,33 +18,34 @@ const { tagline } = siteConfig.store;
         <div class="absolute inset-0 overflow-hidden">
           <img
             src={slide.url}
-            alt={slide.subTitle}
+            alt="save room for dessert MASTER KEY"
             class="w-full h-full object-cover object-center scale-105 transition-transform duration-[8000ms] ease-out transform hero-bg-img"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-noir-950/60 via-noir-950/15 to-noir-950/30"></div>
         </div>
-
-        <!-- Slide Content -->
-        <div class="relative max-w-[1560px] mx-auto h-full px-6 sm:px-8 lg:px-12 flex flex-col justify-end pb-20 sm:pb-24 z-20 text-cream-50">
-          <div class="max-w-3xl space-y-4">
-            <div class="flex items-center gap-3 drop-shadow-md">
-              <span class="w-8 h-[1px] bg-gold-400"></span>
-              <span class="text-gold-400 text-xs tracking-ultra-wide uppercase font-sans font-medium">
-                {slide.tag}
-              </span>
-            </div>
-            
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif-jp font-light leading-tight tracking-wide whitespace-pre-line drop-shadow-lg">
-              {slide.title}
-            </h1>
-
-            <p class="text-sm font-sans tracking-mega-wide uppercase text-cream-200/90 pt-1 drop-shadow-md">
-              {slide.subTitle}
-            </p>
-          </div>
-        </div>
       </div>
     ))}
+  </div>
+
+  <!-- Hero Content (Static foreground overlay, persists across slide transitions) -->
+  <div class="relative max-w-[1560px] mx-auto h-full px-4 sm:px-6 lg:px-12 flex flex-col justify-end pb-20 sm:pb-24 z-20 text-cream-50 pointer-events-none">
+    <div class="max-w-3xl space-y-4 pointer-events-auto">
+      <div class="flex items-center gap-3 drop-shadow-md">
+        <span class="w-8 h-[1px] bg-gold-400"></span>
+        <span class="text-gold-400 text-xs tracking-ultra-wide lowercase font-sans font-medium">
+          save room for dessert
+        </span>
+      </div>
+      
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif-jp font-light leading-tight tracking-wide whitespace-pre-line drop-shadow-lg">
+        分け合うおいしさ、
+        分かち合うしあわせのケーキ。
+      </h1>
+
+      <p class="text-sm font-sans tracking-mega-wide uppercase text-cream-200/90 pt-1 drop-shadow-md">
+        MASTER KEY
+      </p>
+    </div>
   </div>
 
 </section>
