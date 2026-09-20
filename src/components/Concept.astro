@@ -43,31 +43,16 @@ const { concept: conceptText } = siteConfig.content;
       </div>
 
       <!-- Text Right -->
-      <div class="lg:col-span-6 space-y-8 lg:pl-6">
-        <div class="space-y-4">
+      <div class="lg:col-span-6 space-y-6 lg:pl-6">
+        <div class="space-y-5">
           <h3 class="text-2xl sm:text-3xl font-serif-jp font-light leading-relaxed tracking-wide text-noir-900">
             {conceptText.lead}
           </h3>
           {conceptText.paragraphs.map(p => (
-            <p class="text-stone-600 font-serif-jp text-sm sm:text-base leading-relaxed tracking-wide">
+            <p class="text-stone-600 font-serif-jp text-sm sm:text-base leading-loose tracking-wide">
               {p}
             </p>
           ))}
-        </div>
-
-        <!-- 3 Pillars of Quality -->
-        <div class="border-t border-stone-200/80 pt-8 space-y-6">
-          <h4 class="text-xs font-sans tracking-ultra-wide uppercase text-stone-500 font-semibold">{conceptText.promisesTitle}</h4>
-          
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {conceptText.promises.map(item => (
-              <div class="space-y-2">
-                <span class="text-gold-600 font-serif-title text-xl block">{item.num}</span>
-                <h5 class="text-xs font-medium text-stone-900 tracking-wider">{item.title}</h5>
-                <p class="text-xs text-stone-500 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </div>
