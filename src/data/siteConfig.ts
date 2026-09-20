@@ -95,19 +95,19 @@ export const siteConfig = {
     specialite: {
       items: [
         {
-          id: "napoleon-pie-whole",
-          title: "NAPOLÉON PIE",
-          subTitle: "名物 ナポレオンパイ（ホール）",
-          desc: "たっぷり折り込んだバターのザクザク生地とほろり崩れる口どけ。ご希望の人数に合わせてお仕立てします。",
-          image: "/images/specialite/napoleon-pie.jpg",
+          id: "anniversary-hall-cake",
+          title: "ENTREMETS CÉLÉBRATION",
+          subTitle: "アニバーサリー・デコレーションケーキ",
+          desc: "美しく繊細なデコレーションと軽やかな生クリーム。特別な記念日を彩る評判のホールケーキ。",
+          image: "/images/specialite/anniversary-cake.jpg",
           aspect: "standard"
         },
         {
-          id: "anniversary-hall-cake",
-          title: "ENTREMETS CÉLÉBRATION",
-          subTitle: "繊細なデザインのデコレーションケーキ",
-          desc: "美しく繊細なデコレーションと軽やかな生クリーム。特別な記念日を彩る評判のホールケーキ。",
-          image: "/images/specialite/anniversary-cake.jpg",
+          id: "strawberry-celebration",
+          title: "STRAWBERRY DECORATION",
+          subTitle: "苺のスペシャルデコレーション",
+          desc: "口どけの良い北海道産純生クリームと厳選された旬の苺を贅沢に重ねた王道のアニバーサリーケーキ。",
+          image: "/images/products/shortcake.jpg",
           aspect: "standard"
         },
         {
@@ -129,17 +129,17 @@ export const siteConfig = {
         {
           id: "custom-design-cake",
           title: "SPECIAL ORDER CAKE",
-          subTitle: "特注デザイン＆アニバーサリー",
+          subTitle: "特注デザイン＆記念日ケーキ",
           desc: "誕生日や感謝の集いに。お客様のご希望のテーマやお好みに合わせてひとつひとつ丁寧にお作りします。",
           image: "/images/specialite/design-cake.jpg",
           aspect: "standard"
         },
         {
-          id: "coco-gift-box",
-          title: "COCO GIFT SELECTION",
-          subTitle: "カギのしっぽの愛猫ココちゃん ギフトボックス",
-          desc: "しあわせを呼ぶ鍵しっぽ猫「ココちゃん」が描かれた特製ギフト。大切な方への贈り物や手土産に最適です。",
-          image: "/images/specialite/coco-gift.jpg",
+          id: "party-entremets",
+          title: "PREMIUM CELEBRATION CAKE",
+          subTitle: "ウェディング＆パーティー特注ケーキ",
+          desc: "大切な節目や大人数の集まりを華やかに彩る、職人技を凝縮した特製ホールケーキ。",
+          image: "/images/specialite/anniversary-cake.jpg",
           aspect: "wide"
         }
       ]
@@ -217,12 +217,12 @@ export const siteConfig = {
 
     // --- オーダーメイドセクション (Order Made) ---
     specialite: {
-      badge: "スペシャリテ＆オーダーメイド",
-      titleEn: "Specialité & Custom",
-      subtitleJa: "特別な日を彩る、繊細なデザインのホールケーキ＆ナポレオンパイ",
+      badge: "オーダーメイド・ホールケーキ",
+      titleEn: "Custom Cakes",
+      subtitleJa: "特別な記念日やお祝いを彩る、繊細なデザインのホールケーキ",
       heading: "分け合うおいしさ\n分かち合うしあわせ",
-      desc: "誕生日、記念日、ウェディング、季節のお祝いに。東京の有名ホテルで腕を磨いたパティシエが、デザイン性と美味しさを兼ね備えた特別なホールケーキをお仕立てします。名物の「ナポレオンパイ」は、ご希望の人数に合わせて大きさを調整したホールサイズでもご用意可能です。",
-      tags: ["# ナポレオンパイ", "# アニバーサリー", "# 誕生日ケーキ", "# ギフト", "# 塩尻スイーツ"],
+      desc: "誕生日、記念日、ウェディング、季節のお祝いに。東京の有名ホテルで腕を磨いたパティシエが、デザイン性と美味しさを兼ね備えた特別なホールケーキをお仕立てします。お客様のご希望のテーマやご用途に合わせて、ひとつひとつ心を込めてお作りいたします。",
+      tags: ["# ホールケーキ", "# アニバーサリー", "# 誕生日ケーキ", "# オーダーメイド", "# 記念日"],
       catalogBtn: "ご予約・ご相談について",
       hoverBadge: "詳細を見る",
       menuLink: "商品ラインナップを見る"
