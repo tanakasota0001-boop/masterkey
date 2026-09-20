@@ -8,18 +8,18 @@ const { store } = siteConfig;
 <section id="about" class="py-24 sm:py-32 bg-cream-100/50 text-noir-900 border-t border-stone-200/60 relative overflow-hidden">
   <div class="max-w-[1560px] mx-auto px-6 sm:px-8 lg:px-12 scroll-fade-in">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
-      <!-- Chef / Atelier Image Left -->
-      <div class="lg:col-span-6 relative">
+      <!-- Chef / Atelier Image Left (Desktop only) -->
+      <div class="hidden lg:block lg:col-span-6 relative">
         <div class="relative overflow-hidden shadow-2xl border border-stone-300">
           <img
             src={aboutImg.image}
             alt="Pastry Chef at Kitchen"
-            class="w-full h-[500px] sm:h-[620px] object-cover object-[15%_top] lg:object-top hover:scale-102 transition-transform duration-700"
+            class="w-full h-[500px] sm:h-[620px] object-cover object-top hover:scale-102 transition-transform duration-700"
           />
         </div>
       </div>
 
-      <!-- Message Right -->
+      <!-- Message Right (Desktop Right Column / Mobile Sequential Flow) -->
       <div class="lg:col-span-6 space-y-8 lg:pl-4">
         <div class="space-y-3">
           <span class="text-xs font-sans tracking-mega-wide uppercase text-gold-600 block">{aboutText.badge}</span>
@@ -34,6 +34,17 @@ const { store } = siteConfig;
           {aboutText.paragraphs.map(p => (
             <p>{p}</p>
           ))}
+        </div>
+
+        <!-- Chef Image (Mobile only - placed directly above chef name) -->
+        <div class="block lg:hidden my-6 sm:my-8">
+          <div class="relative overflow-hidden shadow-2xl border border-stone-300">
+            <img
+              src={aboutImg.image}
+              alt="Pastry Chef at Kitchen"
+              class="w-full h-[440px] sm:h-[520px] object-cover object-[15%_top]"
+            />
+          </div>
         </div>
 
         <!-- Owner Chef Signature Right Bottom -->
