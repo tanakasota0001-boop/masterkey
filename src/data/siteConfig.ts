@@ -266,7 +266,7 @@ export const siteConfig = {
     // --- お知らせ＆Instagramセクション (News) ---
     news: {
       badge: "お知らせ",
-      titleEn: "News & Topics",
+      titleEn: "NEWS",
       subtitleJa: "最新情報・営業案内・メディア掲載",
       instagramBadge: "公式SNS",
       instagramTitleEn: "Social Media",
