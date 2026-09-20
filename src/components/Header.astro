@@ -70,10 +70,12 @@ const { store, navigation } = siteConfig;
         <!-- Logo: Centered on mobile, Left on desktop -->
         <a href="#" class="group flex items-center focus:outline-none flex-1 lg:flex-initial py-1">
           <img
-            src={store.logo || "/images/logo.png"}
+            src={store.logoWhite || "/images/logo-white.png"}
             alt={store.nameEn}
             class="h-7 sm:h-8 lg:h-9 w-auto max-w-[190px] sm:max-w-[240px] lg:max-w-[280px] object-contain transition-transform duration-300 group-hover:scale-102 drop-shadow-sm"
             id="main-logo-img"
+            data-logo-dark={store.logo || "/images/logo.png"}
+            data-logo-white={store.logoWhite || "/images/logo-white.png"}
           />
         </a>
 
@@ -208,6 +210,9 @@ const { store, navigation } = siteConfig;
 <script is:inline>
   const headerWrapper = document.getElementById('header-wrapper');
   const announcementBar = document.getElementById('announcement-bar');
+  const mainLogoImg = document.getElementById('main-logo-img');
+  const logoDark = mainLogoImg ? mainLogoImg.getAttribute('data-logo-dark') : '/images/logo.png';
+  const logoWhite = mainLogoImg ? mainLogoImg.getAttribute('data-logo-white') : '/images/logo-white.png';
   const logoTitle = document.getElementById('logo-title');
   const logoSubtitle = document.getElementById('logo-subtitle');
   const desktopNav = document.getElementById('desktop-nav');
@@ -225,6 +230,10 @@ const { store, navigation } = siteConfig;
 
     headerWrapper.classList.add('text-cream-50', 'bg-transparent');
     headerWrapper.classList.remove('text-noir-900', 'bg-cream-50/95', 'backdrop-blur-md', 'shadow-sm');
+
+    if (mainLogoImg && logoWhite) {
+      mainLogoImg.src = logoWhite;
+    }
 
     logoTitle?.classList.add('text-cream-50');
     logoTitle?.classList.remove('text-noir-900');
@@ -253,6 +262,10 @@ const { store, navigation } = siteConfig;
 
     headerWrapper.classList.remove('text-cream-50', 'bg-transparent');
     headerWrapper.classList.add('text-noir-900', 'bg-cream-50/95', 'backdrop-blur-md', 'shadow-sm');
+
+    if (mainLogoImg && logoDark) {
+      mainLogoImg.src = logoDark;
+    }
 
     logoTitle?.classList.remove('text-cream-50');
     logoTitle?.classList.add('text-noir-900');

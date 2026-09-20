@@ -14,6 +14,7 @@ export const siteConfig = {
     nameJa: "マスターキー",
     subtitle: "Patisserie & Baked Sweets",
     logo: "/images/logo.png",
+    logoWhite: "/images/logo-white.png",
     tagline: "心も別腹も満たす、特別なスイーツを。",
     shortConcept: "分け合うおいしさ・分かち合うしあわせ。すべてのお客さまの心のカギになる洋菓子を塩尻から。",
     description: "東京・帝国ホテルで14年間腕を磨いたパティシエが営む洋菓子店。松本市で親しまれた10年を経て、2024年に塩尻市広丘野村へ移転リニューアル。「甘いものは別腹」を合言葉に、美しく繊細なホールケーキや看板ナポレオンパイ、厳選素材の焼き菓子をお届けします。",
@@ -60,8 +61,8 @@ export const siteConfig = {
       { id: "store", labelEn: "Store", labelJa: "店舗情報", href: "#store" },
       { id: "news", labelEn: "News", labelJa: "お知らせ", href: "#news" }
     ],
-    contactBtnText: "ご予約（お電話）",
-    mobileContactBtnText: "お電話でのご予約・お問い合わせ"
+    contactBtnText: "ご予約・お問い合わせ",
+    mobileContactBtnText: "ご予約・お問い合わせ"
   },
 
   // ==========================================
@@ -71,22 +72,16 @@ export const siteConfig = {
     // トップの大きなカルーセル画像
     heroSlides: [
       {
-        url: "/images/hero/hero-napoleon.jpg",
+        url: "/images/hero/01.jpg",
         subTitle: "House Specialité",
         title: "心も別腹も満たす、\n極上のナポレオンパイ。",
         tag: "Napoleon Pie"
       },
       {
-        url: "/images/hero/hero-anniversary.jpg",
+        url: "/images/hero/002.jpg",
         subTitle: "Celebration & Memory",
         title: "分け合うおいしさ、\n分かち合うしあわせのケーキ。",
         tag: "Anniversary Cake"
-      },
-      {
-        url: "/images/hero/hero-storefront.jpg",
-        subTitle: "Welcome to MASTER KEY",
-        title: "すべてのお客さまの\n心のカギになる洋菓子店。",
-        tag: "Shiojiri Atelier"
       }
     ],
 
