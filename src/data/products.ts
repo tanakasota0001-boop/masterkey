@@ -32,7 +32,7 @@ export const products: Product[] = [
     flavorNote: '芳醇なバターの香ばしさと、ザクザク食感＆カスタードのコク',
     ingredients: ['国産発酵バター', '厳選苺', '自家製濃厚カスタード', 'パイ生地'],
     isSpecialite: true,
-    image: 'https://www.web-komachi.com/webko/wp-content/uploads/2024/01/VDQA0434.jpg'
+    image: '/images/products/napoleon-pie.jpg'
   },
   {
     id: 'choux-creme',
@@ -45,7 +45,7 @@ export const products: Product[] = [
     flavorNote: '卵の豊かな風味と天然バニラの華やかな香り',
     ingredients: ['信州ノニタマゴ', '低温殺菌牛乳', '天然マダガスカルバニラ', '発酵バター'],
     isSpecialite: true,
-    image: 'https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&w=1000&q=85'
+    image: '/images/products/choux-creme.jpg'
   },
   {
     id: 'shortcake',
@@ -57,7 +57,7 @@ export const products: Product[] = [
     description: 'きめ細かくふんわりと焼き上げたスポンジに、口どけ軽やかな純生クリームとみずみずしい旬の苺を贅沢に重ねました。甘すぎず、どなたにも愛される王道のケーキです。',
     flavorNote: '軽やかな純生クリームのコクと、苺の爽やかな酸味',
     ingredients: ['信州ノニタマゴ', '北海道産純生クリーム', '契約農家直送苺', '国産小麦'],
-    image: 'https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=1000&q=85'
+    image: '/images/products/shortcake.jpg'
   },
   {
     id: 'custard-pudding',
@@ -69,7 +69,7 @@ export const products: Product[] = [
     description: '松本産のブランド卵「信州ノニタマゴ」と濃厚な牛乳、天然バニラビーンズを贅沢に使用。なめらかな舌触りと卵本来のやさしいコク、ほろ苦い自家製カラメルが調和します。',
     flavorNote: '濃厚な卵の甘みと、ほろ苦く香ばしいカラメルソース',
     ingredients: ['信州ノニタマゴ', '濃厚牛乳', 'マダガスカル産バニラ', 'きび砂糖'],
-    image: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=1000&q=85'
+    image: '/images/products/custard-pudding.jpg'
   },
   {
     id: 'tarte-fruits',
@@ -82,7 +82,7 @@ export const products: Product[] = [
     flavorNote: 'サクサク香ばしいタルト生地と、フルーツのみずみずしい果汁',
     ingredients: ['旬のフレッシュフルーツ', '発酵バター', 'アーモンドクリーム', '信州ノニタマゴ'],
     isSeasonal: true,
-    image: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=1000&q=85'
+    image: '/images/products/tarte-fruits.jpg'
   },
   {
     id: 'chocolat-classique',
@@ -94,7 +94,7 @@ export const products: Product[] = [
     description: '上質なクーベルチュールチョコレートを贅沢に使用したビターなショコラケーキ。しっとりとなめらかな口どけと、カカオの芳醇なアロマをお楽しみいただけます。',
     flavorNote: '深みのあるビターカカオのコクと心地よい余韻',
     ingredients: ['最高級クーベルチュール', '国産発酵バター', '信州ノニタマゴ', 'ココア'],
-    image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=85'
+    image: '/images/products/chocolat-classique.jpg'
   },
   {
     id: 'financier',
@@ -107,7 +107,7 @@ export const products: Product[] = [
     flavorNote: '焦がしバターの芳醇なアロマとアーモンドのコク',
     ingredients: ['国産発酵バター100%', 'アーモンドパウダー', '信州ノニタマゴ卵白', 'ゲランド塩'],
     isSpecialite: true,
-    image: 'https://www.web-komachi.com/webko/wp-content/uploads/2024/01/IMG_E3796.jpg'
+    image: '/images/products/financier.jpg'
   },
   {
     id: 'madeleine',
@@ -119,7 +119,7 @@ export const products: Product[] = [
     description: '貝殻の形にふっくら焼き上げたクラシックな焼き菓子。上質なバターと天然蜂蜜のやさしい甘み、ほんのり香るレモンゼストが爽やかなアクセントです。',
     flavorNote: 'バターと蜂蜜のしっとりした甘み、爽やかな柑橘の香り',
     ingredients: ['国産発酵バター', '信州ノニタマゴ', '天然蜂蜜', 'レモンゼスト'],
-    image: 'https://www.web-komachi.com/webko/wp-content/uploads/2024/01/IMG_E3793.jpg'
+    image: '/images/products/madeleine.jpg'
   },
   {
     id: 'canele',
@@ -131,7 +131,7 @@ export const products: Product[] = [
     description: '蜜蝋を塗った銅型でじっくりと高温で焼き上げました。外側はカリッと香ばしく、中はカスタードクリームのようにしっとりもっちり。ダークラムとバニラが香ります。',
     flavorNote: '外側のカリッとしたカラメル香と、中のもっちりラムバニラ感',
     ingredients: ['低温殺菌牛乳', '信州ノニタマゴ', 'ダークラム酒', 'バニラビーンズ'],
-    image: 'https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=1000&q=85'
+    image: '/images/products/canele.jpg'
   },
   {
     id: 'coco-gift-box',
@@ -144,6 +144,6 @@ export const products: Product[] = [
     flavorNote: '厳選素材の焼き菓子が織りなす温かな味わい',
     ingredients: ['国産発酵バターフィナンシェ', 'マドレーヌ', '焼き菓子各種（個別包装）'],
     isSpecialite: true,
-    image: 'https://www.web-komachi.com/webko/wp-content/uploads/2024/01/IMG_E3792.jpg'
+    image: '/images/products/coco-gift.jpg'
   }
 ];

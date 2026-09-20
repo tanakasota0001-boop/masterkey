@@ -66,19 +66,19 @@ export const siteConfig = {
     // トップの大きなカルーセル画像
     heroSlides: [
       {
-        url: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/VDQA0434.jpg",
+        url: "/images/hero/hero-napoleon.jpg",
         subTitle: "House Specialité",
         title: "心も別腹も満たす、\n極上のナポレオンパイ。",
         tag: "Napoleon Pie"
       },
       {
-        url: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/BGHH5258.jpg",
+        url: "/images/hero/hero-anniversary.jpg",
         subTitle: "Celebration & Memory",
         title: "分け合うおいしさ、\n分かち合うしあわせのケーキ。",
         tag: "Anniversary Cake"
       },
       {
-        url: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/IMG_3810-2.jpg",
+        url: "/images/hero/hero-storefront.jpg",
         subTitle: "Welcome to MASTER KEY",
         title: "すべてのお客さまの\n心のカギになる洋菓子店。",
         tag: "Shiojiri Atelier"
@@ -87,8 +87,8 @@ export const siteConfig = {
 
     // コンセプトセクション画像（メイン・サブ）
     concept: {
-      main: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/IMG_3803.jpg",
-      sub: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/IMG_3808.jpg"
+      main: "/images/concept/concept-main.jpg",
+      sub: "/images/concept/concept-sub.jpg"
     },
 
     // オーダーメイド（Sur-Mesure）ギャラリー画像
@@ -99,7 +99,7 @@ export const siteConfig = {
           title: "NAPOLÉON PIE",
           subTitle: "名物 ナポレオンパイ（ホール）",
           desc: "たっぷり折り込んだバターのザクザク生地とほろり崩れる口どけ。ご希望の人数に合わせてお仕立てします。",
-          image: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/VDQA0434.jpg",
+          image: "/images/specialite/napoleon-pie.jpg",
           aspect: "standard"
         },
         {
@@ -107,7 +107,7 @@ export const siteConfig = {
           title: "ENTREMETS CÉLÉBRATION",
           subTitle: "繊細なデザインのデコレーションケーキ",
           desc: "美しく繊細なデコレーションと軽やかな生クリーム。特別な記念日を彩る評判のホールケーキ。",
-          image: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/BGHH5258.jpg",
+          image: "/images/specialite/anniversary-cake.jpg",
           aspect: "standard"
         },
         {
@@ -115,7 +115,7 @@ export const siteConfig = {
           title: "SEASONAL FRUITS CREATION",
           subTitle: "季節の彩り特製フルーツケーキ",
           desc: "市場や契約農家直送の旬果実を惜しみなくあしらった、華やかでみずみずしい特注ケーキ。",
-          image: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/BJAH7150.jpg",
+          image: "/images/specialite/fruits-cake.jpg",
           aspect: "wide"
         },
         {
@@ -123,7 +123,7 @@ export const siteConfig = {
           title: "CHOCOLAT ÉLÉGANCE",
           subTitle: "ショコラ・アントルメ",
           desc: "上質なクーベルチュールの深いコクとアロマが広がる大人のための記念日ショコラケーキ。",
-          image: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/HHLP2207.jpg",
+          image: "/images/specialite/chocolate-cake.jpg",
           aspect: "standard"
         },
         {
@@ -131,7 +131,7 @@ export const siteConfig = {
           title: "SPECIAL ORDER CAKE",
           subTitle: "特注デザイン＆アニバーサリー",
           desc: "誕生日や感謝の集いに。お客様のご希望のテーマやお好みに合わせてひとつひとつ丁寧にお作りします。",
-          image: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/DSC05420.jpg",
+          image: "/images/specialite/design-cake.jpg",
           aspect: "standard"
         },
         {
@@ -139,7 +139,7 @@ export const siteConfig = {
           title: "COCO GIFT SELECTION",
           subTitle: "カギのしっぽの愛猫ココちゃん ギフトボックス",
           desc: "しあわせを呼ぶ鍵しっぽ猫「ココちゃん」が描かれた特製ギフト。大切な方への贈り物や手土産に最適です。",
-          image: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/IMG_E3792.jpg",
+          image: "/images/specialite/coco-gift.jpg",
           aspect: "wide"
         }
       ]
@@ -147,34 +147,34 @@ export const siteConfig = {
 
     // シェフ・工房紹介セクション画像
     about: {
-      image: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/IMG_3799.jpg",
+      image: "/images/about/chef-horiuchi.jpg",
       roleText: "Owner Chef & Pastry Craftsman"
     },
 
     // Instagramギャラリー写真
     gallery: [
       {
-        url: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/VDQA0434.jpg",
+        url: "/images/specialite/napoleon-pie.jpg",
         caption: "名物 ナポレオンパイ"
       },
       {
-        url: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/IMG_3809.jpg",
+        url: "/images/gallery/gallery-showcase.jpg",
         caption: "彩り豊かなショーケース"
       },
       {
-        url: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/IMG_E3796.jpg",
+        url: "/images/gallery/gallery-baked.jpg",
         caption: "国産発酵バターの焼き菓子"
       },
       {
-        url: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/BGHH5258.jpg",
+        url: "/images/specialite/anniversary-cake.jpg",
         caption: "記念日アニバーサリーケーキ"
       },
       {
-        url: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/IMG_E3792.jpg",
+        url: "/images/specialite/coco-gift.jpg",
         caption: "愛猫ココちゃんのギフト缶"
       },
       {
-        url: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/IMG_3808.jpg",
+        url: "/images/concept/concept-sub.jpg",
         caption: "遊び心あふれる鍵型の小窓"
       }
     ]
