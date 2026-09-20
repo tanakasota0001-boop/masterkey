@@ -72,7 +72,7 @@ const { store, navigation } = siteConfig;
           <img
             src={store.logo || "/images/logo.png"}
             alt={store.nameEn}
-            class="h-7 sm:h-8 lg:h-9 w-auto max-w-[190px] sm:max-w-[240px] lg:max-w-[280px] object-contain transition-all duration-300 group-hover:scale-102 drop-shadow-sm brightness-0 invert"
+            class="h-7 sm:h-8 lg:h-9 w-auto max-w-[190px] sm:max-w-[240px] lg:max-w-[280px] object-contain transition-transform duration-300 group-hover:scale-102 drop-shadow-sm"
             id="main-logo-img"
           />
         </a>
@@ -208,7 +208,6 @@ const { store, navigation } = siteConfig;
 <script is:inline>
   const headerWrapper = document.getElementById('header-wrapper');
   const announcementBar = document.getElementById('announcement-bar');
-  const mainLogoImg = document.getElementById('main-logo-img');
   const logoTitle = document.getElementById('logo-title');
   const logoSubtitle = document.getElementById('logo-subtitle');
   const desktopNav = document.getElementById('desktop-nav');
@@ -226,8 +225,6 @@ const { store, navigation } = siteConfig;
 
     headerWrapper.classList.add('text-cream-50', 'bg-transparent');
     headerWrapper.classList.remove('text-noir-900', 'bg-cream-50/95', 'backdrop-blur-md', 'shadow-sm');
-
-    mainLogoImg?.classList.add('brightness-0', 'invert');
 
     logoTitle?.classList.add('text-cream-50');
     logoTitle?.classList.remove('text-noir-900');
@@ -256,8 +253,6 @@ const { store, navigation } = siteConfig;
 
     headerWrapper.classList.remove('text-cream-50', 'bg-transparent');
     headerWrapper.classList.add('text-noir-900', 'bg-cream-50/95', 'backdrop-blur-md', 'shadow-sm');
-
-    mainLogoImg?.classList.remove('brightness-0', 'invert');
 
     logoTitle?.classList.remove('text-cream-50');
     logoTitle?.classList.add('text-noir-900');
