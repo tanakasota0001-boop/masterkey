@@ -21,25 +21,24 @@ const { tagline } = siteConfig.store;
             alt={slide.subTitle}
             class="w-full h-full object-cover object-center scale-105 transition-transform duration-[8000ms] ease-out transform hero-bg-img"
           />
-          <div class="absolute inset-0 bg-gradient-to-t from-noir-950/85 via-noir-950/30 to-noir-950/60"></div>
-          <div class="absolute inset-0 bg-black/10 mix-blend-overlay"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-noir-950/60 via-noir-950/15 to-noir-950/30"></div>
         </div>
 
         <!-- Slide Content -->
         <div class="relative max-w-[1560px] mx-auto h-full px-6 sm:px-8 lg:px-12 flex flex-col justify-end pb-20 sm:pb-24 z-20 text-cream-50">
           <div class="max-w-3xl space-y-4">
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-3 drop-shadow-md">
               <span class="w-8 h-[1px] bg-gold-400"></span>
               <span class="text-gold-400 text-xs tracking-ultra-wide uppercase font-sans font-medium">
                 {slide.tag}
               </span>
             </div>
             
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif-jp font-light leading-tight tracking-wide whitespace-pre-line drop-shadow-md">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif-jp font-light leading-tight tracking-wide whitespace-pre-line drop-shadow-lg">
               {slide.title}
             </h1>
 
-            <p class="text-sm font-sans tracking-mega-wide uppercase text-cream-200/80 pt-1">
+            <p class="text-sm font-sans tracking-mega-wide uppercase text-cream-200/90 pt-1 drop-shadow-md">
               {slide.subTitle}
             </p>
           </div>
