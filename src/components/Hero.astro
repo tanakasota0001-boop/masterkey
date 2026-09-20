@@ -1,7 +1,6 @@
 ---
 import { siteConfig } from '../data/siteConfig';
 const { heroSlides } = siteConfig.images;
-const { tagline } = siteConfig.store;
 ---
 
 <section class="relative h-screen min-h-[640px] max-h-[960px] w-full overflow-hidden bg-noir-950">
@@ -25,23 +24,6 @@ const { tagline } = siteConfig.store;
         </div>
       </div>
     ))}
-  </div>
-
-  <!-- Hero Content (Static foreground overlay, persists across slide transitions) -->
-  <div class="relative max-w-[1560px] mx-auto h-full px-4 sm:px-6 lg:px-12 flex flex-col justify-end pb-20 sm:pb-24 z-20 text-cream-50 pointer-events-none">
-    <div class="max-w-3xl space-y-4 pointer-events-auto">
-      <div class="flex items-center gap-3 drop-shadow-md">
-        <span class="w-8 h-[1px] bg-gold-400"></span>
-        <span class="text-gold-400 text-xs tracking-ultra-wide lowercase font-sans font-medium">
-          save room for dessert
-        </span>
-      </div>
-      
-      <h1 class="text-[21px] min-[390px]:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-serif-jp font-light leading-snug sm:leading-tight tracking-wide drop-shadow-lg">
-        <span class="block">分け合うおいしさ、</span>
-        <span class="block whitespace-nowrap">分かち合うしあわせのケーキ。</span>
-      </h1>
-    </div>
   </div>
 
 </section>
