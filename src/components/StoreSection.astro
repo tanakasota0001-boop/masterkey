@@ -12,7 +12,7 @@ const { store: storeText } = siteConfig.content;
       <h2 class="text-3xl sm:text-5xl lg:text-6xl font-serif-title tracking-ultra-wide font-light uppercase">
         {storeText.titleEn}
       </h2>
-      <div class="w-12 h-[1px] bg-orange-400 mx-auto"></div>
+      <div class="w-12 h-[1px] bg-orange-600 mx-auto"></div>
     </div>
 
     <!-- Store Layout: Unified Store Info & Calendar on Left, Map on Right -->
@@ -114,7 +114,7 @@ const { store: storeText } = siteConfig.content;
                 <span>{storeText.legendHoliday}</span>
               </div>
               <div class="flex items-center gap-1.5">
-                <span class="w-3 h-3 rounded-full bg-orange-400/30 border border-orange-500"></span>
+                <span class="w-3 h-3 rounded-full bg-orange-600/20 border border-orange-600"></span>
                 <span>{storeText.legendToday}</span>
               </div>
             </div>
@@ -223,7 +223,7 @@ const { store: storeText } = siteConfig.content;
       let cellClass = 'h-9 flex flex-col items-center justify-center rounded-sm transition-colors text-xs ';
 
       if (isCurrentDay) {
-        cellClass += 'ring-1 ring-orange-500 font-bold bg-orange-400/10 ';
+        cellClass += 'ring-1 ring-orange-600 font-bold bg-orange-600/10 ';
       }
 
       if (isHoliday) {

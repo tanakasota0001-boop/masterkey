@@ -9,6 +9,7 @@ const { specialite: specText } = siteConfig.content;
     /* Sticky behavior for the content side on desktop */
     @media screen and (min-width: 1024px) {
       .yc-content-wrapper {
+        position: -webkit-sticky;
         position: sticky;
         top: 6rem;
         align-self: flex-start;
@@ -87,7 +88,7 @@ const { specialite: specText } = siteConfig.content;
             <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif-jp text-stone-900 font-light leading-snug sm:leading-tight tracking-wide whitespace-pre-line">
               {specText.heading}
             </h2>
-            <div class="w-10 h-[1px] bg-orange-400 mx-auto mt-4"></div>
+            <div class="w-10 h-[1px] bg-orange-600 mx-auto mt-4"></div>
           </div>
 
           <!-- Description Text -->
