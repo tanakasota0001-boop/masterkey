@@ -3,11 +3,6 @@
  * 
  * 💡 このファイルを編集するだけで、店舗情報、全セクションの文言、画像URL、
  * ナビゲーション、お問い合わせフォームの選択肢などを誰でも簡単に差し替えられます。
- * 
- * 画像について:
- * - UnsplashなどのWeb画像URL（"https://..."）
- * - または public/images/ フォルダに保存した画像（例: "/images/hero/sample.jpg"）
- * どちらでも指定可能です。
  */
 
 export const siteConfig = {
@@ -15,30 +10,35 @@ export const siteConfig = {
   // 1. 店舗基本情報 (Store Information)
   // ==========================================
   store: {
-    nameEn: "THE PATISSERIE",
-    nameJa: "パティスリー ザ・テラス",
-    subtitle: "Artisan Cakes & Bakery",
-    tagline: "五感で味わう、甘美なる芸術。",
-    shortConcept: "旬の素材と職人技が織りなす、日常に寄り添う甘美なひととき。",
-    description: "厳選した旬の果実、発酵バター、こだわりの卵を使用し、職人がひとつひとつ丁寧に仕上げる洋菓子専門店。洗練された美味しさと心安らぐ時間をお届けします。",
-    postalCode: "153-0042",
-    address: "東京都目黒区青葉台1-2-3",
-    tel: "03-0000-0000",
-    email: "info@example.com",
-    businessHours: "11:00 ～ 19:00",
+    nameEn: "save room for dessert MASTER KEY",
+    nameJa: "マスターキー",
+    subtitle: "Patisserie & Baked Sweets",
+    tagline: "心も別腹も満たす、特別なスイーツを。",
+    shortConcept: "分け合うおいしさ・分かち合うしあわせ。すべてのお客さまの心のカギになる洋菓子を塩尻から。",
+    description: "東京・帝国ホテルで14年間腕を磨いたパティシエが営む洋菓子店。松本市で親しまれた10年を経て、2024年に塩尻市広丘野村へ移転リニューアル。「甘いものは別腹」を合言葉に、美しく繊細なホールケーキや看板ナポレオンパイ、厳選素材の焼き菓子をお届けします。",
+    postalCode: "399-0702",
+    address: "長野県塩尻市広丘野村1788-387",
+    tel: "0263-75-2134",
+    email: "info@masterkey-sweets.com",
+    businessHours: "11:00 ～ 18:00",
     businessHoursNote: "※当日分のお菓子が無くなり次第終了となる場合がございます",
-    holidays: "毎週火曜日 / 水曜日",
-    holidaysNote: "※祝日の場合は営業、翌平日休業",
+    holidays: "毎週月曜日 / 火曜日",
+    holidaysNote: "※祝日等の営業・振替や臨時休業は公式Instagramにてお知らせいたします",
     // 営業カレンダーで定休日に指定する曜日 (0:日曜, 1:月曜, 2:火曜, 3:水曜, 4:木曜, 5:金曜, 6:土曜)
-    weeklyHolidayDays: [2, 3],
+    weeklyHolidayDays: [1, 2],
     accessList: [
-      "東急田園都市線「池尻大橋駅」東口 徒歩5分",
-      "東急東横線・東京メトロ日比谷線「中目黒駅」徒歩10分"
+      "JR篠ノ井線「広丘駅」西口より車で約4分 / 徒歩約15分",
+      "塩尻市道広丘東通線沿い（ヤマト運輸 広丘野村営業所近く）",
+      "長野自動車道「塩尻IC」「塩尻北IC」より車で各約10〜15分"
     ],
-    parking: "専用駐車場 2台（店舗裏手） / 近隣にコインパーキングあり",
-    instagramUrl: "https://www.instagram.com/",
-    instagramAccountName: "@patisserie_official",
-    googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.747975467362!2d139.7016358152589!3d35.65858048019951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b563b00109f%3A0x337328def1e1ab26!2z5riL6LC36aeF!5e0!3m2!1sja!2sjp!4v1600000000000!5m2!1sja!2sjp",
+    parking: "専用駐車場 約10台完備（店舗前）",
+    instagramUrl: "https://www.instagram.com/sr4d.masterkey/",
+    instagramAccountName: "@sr4d.masterkey",
+    threadsUrl: "https://www.threads.com/@sr4d.masterkey",
+    threadsAccountName: "@sr4d.masterkey",
+    xUrl: "https://x.com/original_sweets",
+    xAccountName: "@original_sweets",
+    googleMapsEmbedUrl: "https://maps.google.com/maps?q=長野県塩尻市広丘野村1788-387&output=embed",
     copyrightYear: "2026"
   },
 
@@ -49,13 +49,13 @@ export const siteConfig = {
     links: [
       { id: "concept", labelEn: "Concept", labelJa: "こだわり", href: "#concept" },
       { id: "collection", labelEn: "Menu", labelJa: "商品一覧", href: "#collection" },
-      { id: "specialty", labelEn: "Order Made", labelJa: "オーダーメイド", href: "#specialty" },
-      { id: "about", labelEn: "About", labelJa: "職人の想い", href: "#about" },
+      { id: "specialty", labelEn: "Specialité", labelJa: "オーダーメイド", href: "#specialty" },
+      { id: "about", labelEn: "Chef & Story", labelJa: "職人の想い", href: "#about" },
       { id: "store", labelEn: "Store", labelJa: "店舗情報", href: "#store" },
       { id: "news", labelEn: "News", labelJa: "お知らせ", href: "#news" }
     ],
     contactBtnText: "お問い合わせ",
-    mobileContactBtnText: "お問い合わせ・ご予約"
+    mobileContactBtnText: "ご相談・お問い合わせ"
   },
 
   // ==========================================
@@ -65,116 +65,116 @@ export const siteConfig = {
     // トップの大きなカルーセル画像
     heroSlides: [
       {
-        url: "https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=1920&q=85",
-        subTitle: "Purity & Harmony",
-        title: "素材の息吹をそのままに。\n心ほどける、甘美なひととき。",
-        tag: "Seasonal Cake"
+        url: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/VDQA0434.jpg",
+        subTitle: "House Specialité",
+        title: "心も別腹も満たす、\n極上のナポレオンパイ。",
+        tag: "Napoleon Pie"
       },
       {
-        url: "https://images.unsplash.com/photo-1569864358642-9d1684040f43?auto=format&fit=crop&w=1920&q=85",
-        subTitle: "Craft & Passion",
-        title: "厳選素材と職人技が紡ぐ、\n気品あふれる極上のスイーツ。",
-        tag: "Artisan Sweets"
+        url: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/BGHH5258.jpg",
+        subTitle: "Celebration & Memory",
+        title: "分け合うおいしさ、\n分かち合うしあわせのケーキ。",
+        tag: "Anniversary Cake"
       },
       {
-        url: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1920&q=85",
-        subTitle: "Tradition & Taste",
-        title: "日々の暮らしに寄り添う、\n記憶に残る特別な美味しさ。",
-        tag: "House Specialty"
+        url: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/IMG_3810-2.jpg",
+        subTitle: "Welcome to MASTER KEY",
+        title: "すべてのお客さまの\n心のカギになる洋菓子店。",
+        tag: "Shiojiri Atelier"
       }
     ],
 
     // コンセプトセクション画像（メイン・サブ）
     concept: {
-      main: "https://images.unsplash.com/photo-1556911073-38141963c9e0?auto=format&fit=crop&w=1200&q=85",
-      sub: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=85"
+      main: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/IMG_3803.jpg",
+      sub: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/IMG_3808.jpg"
     },
 
     // オーダーメイド（Sur-Mesure）ギャラリー画像
     specialite: {
       items: [
         {
-          id: "piece-montee",
-          title: "PIÈCE MONTÉE",
-          subTitle: "ウェディング・アニバーサリー多段ケーキ",
-          desc: "特別な記念日やウェディングに華を添える、職人技を凝縮したエレガントな多段ケーキ。",
-          image: "https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=1200&q=85",
-          aspect: "standard" // 4:5
+          id: "napoleon-pie-whole",
+          title: "NAPOLÉON PIE",
+          subTitle: "名物 ナポレオンパイ（ホール）",
+          desc: "たっぷり折り込んだバターのザクザク生地とほろり崩れる口どけ。ご希望の人数に合わせてお仕立てします。",
+          image: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/VDQA0434.jpg",
+          aspect: "standard"
         },
         {
-          id: "anniversary-shortcake",
+          id: "anniversary-hall-cake",
           title: "ENTREMETS CÉLÉBRATION",
-          subTitle: "誕生日・アニバーサリーホールケーキ",
-          desc: "軽やかな北海道産純生クリームと厳選された旬の果実を惜しみなくあしらった特製アニバーサリーケーキ。",
-          image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=85",
-          aspect: "standard" // 4:5
+          subTitle: "繊細なデザインのデコレーションケーキ",
+          desc: "美しく繊細なデコレーションと軽やかな生クリーム。特別な記念日を彩る評判のホールケーキ。",
+          image: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/BGHH5258.jpg",
+          aspect: "standard"
         },
         {
-          id: "noel-special",
-          title: "BÛCHE & NOËL CRÉATION",
-          subTitle: "クリスマス限定プレミアムケーキ",
-          desc: "聖夜の食卓を華やかに彩る、年に一度のフェスティブな特別創作ケーキ。ご予約限定。",
-          image: "https://images.unsplash.com/photo-1543508282-6319a3e2621f?auto=format&fit=crop&w=1600&q=85",
-          aspect: "wide" // 3:2 span 2 cols
+          id: "custom-fruits-cake",
+          title: "SEASONAL FRUITS CREATION",
+          subTitle: "季節の彩り特製フルーツケーキ",
+          desc: "市場や契約農家直送の旬果実を惜しみなくあしらった、華やかでみずみずしい特注ケーキ。",
+          image: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/BJAH7150.jpg",
+          aspect: "wide"
         },
         {
-          id: "tarte-fruits",
-          title: "TARTE AUX FRUITS DE SAISON",
-          subTitle: "季節の極上フルーツタルト",
-          desc: "香ばしいサブレ生地に自家製クレームダマンド、厳選した最高品質の旬のフルーツを贅沢に敷き詰めて。",
-          image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=85",
-          aspect: "standard" // 4:5
+          id: "chocolate-entremets",
+          title: "CHOCOLAT ÉLÉGANCE",
+          subTitle: "ショコラ・アントルメ",
+          desc: "上質なクーベルチュールの深いコクとアロマが広がる大人のための記念日ショコラケーキ。",
+          image: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/HHLP2207.jpg",
+          aspect: "standard"
         },
         {
-          id: "number-custom-cake",
-          title: "NUMBER & CUSTOM CAKE",
-          subTitle: "数字・メッセージ・特注ケーキ",
-          desc: "ご年齢や記念の数字、お好みのテーマカラーに合わせてひとつひとつフルオーダーでお仕立てします。",
-          image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=1200&q=85",
-          aspect: "standard" // 4:5
+          id: "custom-design-cake",
+          title: "SPECIAL ORDER CAKE",
+          subTitle: "特注デザイン＆アニバーサリー",
+          desc: "誕生日や感謝の集いに。お客様のご希望のテーマやお好みに合わせてひとつひとつ丁寧にお作りします。",
+          image: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/DSC05420.jpg",
+          aspect: "standard"
         },
         {
-          id: "party-dessert-buffet",
-          title: "DESSERT COCKTAIL & BUFFET",
-          subTitle: "パーティー・イベント用デザートアソート",
-          desc: "大切なパーティーやおもてなしを彩る、華やかで一口サイズのプティフールや特製デザートスタンド。",
-          image: "https://images.unsplash.com/photo-1569864358642-9d1684040f43?auto=format&fit=crop&w=1600&q=85",
-          aspect: "wide" // 3:2 span 2 cols
+          id: "coco-gift-box",
+          title: "COCO GIFT SELECTION",
+          subTitle: "カギのしっぽの愛猫ココちゃん ギフトボックス",
+          desc: "しあわせを呼ぶ鍵しっぽ猫「ココちゃん」が描かれた特製ギフト。大切な方への贈り物や手土産に最適です。",
+          image: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/IMG_E3792.jpg",
+          aspect: "wide"
         }
       ]
     },
 
     // シェフ・工房紹介セクション画像
     about: {
-      image: "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=85",
-      roleText: "Pastry Chef & Baker"
+      image: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/IMG_3799.jpg",
+      roleText: "Owner Chef & Pastry Craftsman"
     },
 
     // Instagramギャラリー写真
     gallery: [
       {
-        url: "https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=600&q=80",
-        caption: "朝焼き苺のショートケーキ"
+        url: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/VDQA0434.jpg",
+        caption: "名物 ナポレオンパイ"
       },
       {
-        url: "https://images.unsplash.com/photo-1569864358642-9d1684040f43?auto=format&fit=crop&w=600&q=80",
-        caption: "季節のマカロンアソート"
+        url: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/IMG_3809.jpg",
+        caption: "彩り豊かなショーケース"
       },
       {
-        url: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80",
-        caption: "和栗のモンブラン仕込み"
+        url: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/IMG_E3796.jpg",
+        caption: "国産発酵バターの焼き菓子"
       },
       {
-        url: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&w=600&q=80",
-        caption: "バニラ香るシュークリーム"
+        url: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/BGHH5258.jpg",
+        caption: "記念日アニバーサリーケーキ"
       },
       {
-        url: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80",
-        caption: "クラシック・ショコラ"
+        url: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/IMG_E3792.jpg",
+        caption: "愛猫ココちゃんのギフト缶"
       },
       {
-        url: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80",
-        caption: "手焼きサブレ＆ディアマン"
+        url: "https://www.web-komachi.com/webko/wp-content/uploads/2024/01/IMG_3808.jpg",
+        caption: "遊び心あふれる鍵型の小窓"
       }
     ]
   },
@@ -187,93 +187,94 @@ export const siteConfig = {
     concept: {
       badge: "こだわり",
       titleEn: "Concept",
-      subtitleJa: "素材と技が織りなす、洗練の洋菓子。",
-      lead: "一口で心満たされる、記憶に残るスイーツを。",
+      subtitleJa: "心も別腹も満たす。分け合うおいしさ、分かち合うしあわせ。",
+      lead: "すべてのお客さまの心のカギになるスイーツを。",
       paragraphs: [
-        "洋菓子の伝統的な美意識と製法を大切にしながら、四季折々の厳選素材と軽やかな口どけを追求しています。",
-        "毎朝のアトリエで丁寧に泡立てる純生クリーム、芳醇に薫る発酵バター、そして契約農家から届くみずみずしい旬の果実。納得のいくお菓子だけを店頭に並べ、日々の暮らしに心ほどける甘い余韻をお届けします。"
+        "店名「MASTER KEY（マスターキー）」には、“すべてのお客さまの心のカギになる”という温かい願いを込めています。イメージカラーのオレンジ色は、果物の「ミカン＝未完」から。初心を忘れることなく、常に向上心とチャレンジ精神を持って菓子づくりと向き合っています。",
+        "サブタイトルの「save room for dessert」は、“甘いものは別腹。気にせず気軽に楽しんでほしい”という想い。ケーキが切り分けられたようなロゴマークは「分け合うおいしさ・分かち合うしあわせ」を象徴しています。",
+        "木目を基調とした温もりあふれる店内には、お子さまがのぞき込める鍵型の小窓など遊び心もたっぷり。記念日やお祝いはもちろん、日常のちょっとしたご褒美にも、笑顔をお届けします。"
       ],
-      promisesTitle: "Our 3 Promises",
+      promisesTitle: "Our 3 Commitments",
       promises: [
         {
-          num: "01. 厳選素材",
-          title: "極上の卵と乳の調和",
-          desc: "新鮮なこだわり卵と無添加純生クリーム。素材本来の素直な美味しさを引き出します。"
+          num: "01. 厳選された基本素材",
+          title: "信州ノニタマゴと国産発酵バター",
+          desc: "松本産の安心・安全な「信州ノニタマゴ」や国産発酵バター100%など、素直な美味しさを支える素材を厳選。"
         },
         {
-          num: "02. 伝統と調和",
-          title: "確かなクラフトマンシップ",
-          desc: "伝統的な製法を基点に、日本人好みの繊細な甘さと食感を追求。"
+          num: "02. 帝国ホテル仕込みの技",
+          title: "14年の研鑽が生む繊細な調和",
+          desc: "名門ホテルで培った確かなクラフトマンシップで、甘さと軽やかさ、食感の心地よいバランスを追求。"
         },
         {
-          num: "03. 出来立ての香り",
-          title: "工房直送の鮮度",
-          desc: "工房で毎朝仕上げ、最も香り高くみずみずしい状態でお客様へお届けします。"
+          num: "03. 出来立てと温かい空間",
+          title: "木と遊び心が調和する塩尻のアトリエ",
+          desc: "松本の10年を経て塩尻へ。独立型店舗として広々とした駐車場と木の温もりある空間でお迎えします。"
         }
       ]
     },
 
     // --- オーダーメイドセクション (Order Made) ---
     specialite: {
-      badge: "オーダーメイド",
-      titleEn: "Order Made",
-      subtitleJa: "特別な日を彩る、オーダーメイド・ホールケーキ",
-      heading: "特別な日の\nオーダーメイド",
-      desc: "誕生日、クリスマス、記念日、ウェディングなど、大切な節目を彩る世界にひとつだけの特別なホールケーキ。お客様のご希望のテーマやお好みの果実、サイズに合わせてパティシエがひとつひとつ心を込めてお仕立てします。",
-      tags: ["# 誕生日", "# クリスマス", "# アニバーサリー", "# ウェディング"],
-      catalogBtn: "ご予約・ご相談はこちら",
-      hoverBadge: "ご相談・ご予約",
-      menuLink: "商品一覧を見る"
+      badge: "スペシャリテ＆オーダーメイド",
+      titleEn: "Specialité & Custom",
+      subtitleJa: "特別な日を彩る、繊細なデザインのホールケーキ＆ナポレオンパイ",
+      heading: "分け合うおいしさ\n分かち合うしあわせ",
+      desc: "誕生日、記念日、ウェディング、季節のお祝いに。東京の有名ホテルで腕を磨いたパティシエが、デザイン性と美味しさを兼ね備えた特別なホールケーキをお仕立てします。名物の「ナポレオンパイ」は、ご希望の人数に合わせて大きさを調整したホールサイズでもご用意可能です。",
+      tags: ["# ナポレオンパイ", "# アニバーサリー", "# 誕生日ケーキ", "# ギフト", "# 塩尻スイーツ"],
+      catalogBtn: "ご予約・ご相談について",
+      hoverBadge: "詳細を見る",
+      menuLink: "商品ラインナップを見る"
     },
 
     // --- 商品一覧セクション (Collection) ---
     menu: {
       badge: "商品一覧",
       titleEn: "Collection",
-      subtitleJa: "定番のケーキから手土産に最適な焼き菓子まで",
+      subtitleJa: "定番の生ケーキから名物ナポレオンパイ、手土産に喜ばれる焼き菓子まで",
       hoverBadge: "詳しく見る",
       taxLabel: "（税込）",
       closeButtonText: "閉じる",
-      noticeBoxTitle: "【地方発送・ギフト詰め合わせ・法人様のご注文について】",
-      noticeBoxText: "焼き菓子やマカロンはご予算に応じたオリジナルギフトボックスの詰め合わせや地方配送も承っております。イベント用のお菓子やカフェ・飲食店様への卸販売についてもお気軽にお問い合わせください。",
+      noticeBoxTitle: "【ホールケーキのご予約・ギフトの地方発送について】",
+      noticeBoxText: "ホールケーキやナポレオンパイのご予約は店頭またはお電話（0263-75-2134）にて承っております。愛猫ココちゃんのイラストをあしらった特製ギフトボックスや焼き菓子詰め合わせの地方発送もお気軽にご相談ください。",
       ctaButton: "お問い合わせはこちら"
     },
 
     // --- シェフ・工房セクション (About) ---
     about: {
-      badge: "職人の想い",
-      titleEn: "About",
-      subtitleJa: "毎日、心をこめて。美味しさの先にある感動を。",
+      badge: "シェフの想い",
+      titleEn: "Chef & Story",
+      subtitleJa: "男女年齢問わず、誰にでも愛されるスイーツを届けていきたい。",
       paragraphs: [
-        "幼い頃に魅了された洋菓子の美しさと、オーブンから漂う香ばしいバターの香り。確かな技術を土台にしながら、私たちが何よりも大切にしているのは「作り手自身が心から納得できるお菓子づくり」です。",
-        "素材の選定から温度管理、生地を合わせる手の感覚まで、一切の妥協を排し、毎日工房で真摯にお菓子と向き合っています。",
-        "お召し上がりいただいた瞬間に思わず笑みがこぼれ、「またこのケーキを食べたい」と思い出していただけること。それがパティシエとしての何よりの歓びです。",
-        "心を込めて焼き上げる洋菓子を、どうぞごゆっくりお楽しみください。"
+        "東京の「帝国ホテル」で14年間にわたりパティシエとしての腕を磨き、その後長野県松本市・上高地の有名ホテルを経て、2013年4月に夫婦で松本市出川に「original sweets MASTER KEY」をオープンいたしました。",
+        "約10年間、地域の皆さまに支えていただきながら歩みを続け、2024年1月27日、妻の地元である塩尻市広丘野村へ「save room for dessert MASTER KEY」として移転リニューアルオープンを迎えました。",
+        "「男女年齢問わず、誰にでも愛される商品」をモットーに、基本となる卵やバター、粉の選定から温度・焼き加減まで妥協せず、毎日心を込めて焼き上げています。",
+        "「心も別腹も満たすケーキをご提供します！」 大切な人とケーキを囲む時間に、温かなしあわせが灯りますように。"
       ],
-      chefTitle: "オーナーシェフ",
-      chefName: "田中 奏太",
-      chefNameEn: "Sota Tanaka"
+      chefTitle: "オーナーパティシエ",
+      chefName: "堀内 健介",
+      chefNameEn: "Kensuke Horiuchi"
     },
 
     // --- お知らせ＆Instagramセクション (News) ---
     news: {
       badge: "お知らせ",
-      titleEn: "News",
-      subtitleJa: "最新のお知らせ・季節のご案内",
-      instagramBadge: "インスタグラム",
-      instagramTitleEn: "Instagram",
-      instagramSubtitleJa: "公式インスタグラムの最新投稿",
-      instagramCta: "最新情報を見る",
-      instagramHoverBadge: "Instagramを開く"
+      titleEn: "News & Topics",
+      subtitleJa: "最新情報・営業案内・メディア掲載",
+      instagramBadge: "公式SNS",
+      instagramTitleEn: "Social Media",
+      instagramSubtitleJa: "Instagram・Threads・Xで日々の最新情報を配信中",
+      instagramCta: "Instagramを見る",
+      instagramHoverBadge: "SNSを開く"
     },
 
     // --- 店舗情報＆営業カレンダー (Store) ---
     store: {
       badge: "店舗情報",
-      titleEn: "Store",
+      titleEn: "Store Access",
       subtitleJa: "店舗情報・営業案内・交通アクセス",
       calendarTitle: "営業カレンダー",
-      legendHoliday: "定休日",
+      legendHoliday: "定休日（月・火）",
       legendToday: "本日",
       tableLabels: {
         address: "住所",
@@ -293,23 +294,22 @@ export const siteConfig = {
     footer: {
       navTitle: "Navigation",
       storeTitle: "Store Information",
+      snsTitle: "Official Social Accounts",
       backToTop: "Back to Top"
     },
 
     // --- お問い合わせモーダル (Contact Modal) ---
     contact: {
-      badge: "お問い合わせ",
+      badge: "お問い合わせ・ご相談",
       titleEn: "Contact",
-      subtitleJa: "商品やギフトのご相談・ご注文など",
-      desc: "商品やギフトの地方発送、法人様向けご注文など、お気軽にお問い合わせください。",
-      phoneNoticeTitle: "【お急ぎ・当日在庫の確認はお電話にて】",
+      subtitleJa: "ホールケーキのご相談・ギフトのご注文など",
+      desc: "ホールケーキやナポレオンパイのご予約、ギフトボックスのご注文、その他ご質問などお気軽にお問い合わせください。",
+      phoneNoticeTitle: "【お急ぎ・当日在庫のご確認・ホールケーキ予約はお電話にて】",
       purposes: [
-        "ホールケーキ・オーダーメイドのご予約・ご相談",
-        "焼き菓子・ギフトの地方発送について",
-        "商品・原材料・アレルギーについて",
-        "カフェ・飲食店様向け卸販売のご相談",
-        "取材・メディア・タイアップ関連",
-        "採用について",
+        "ホールケーキ・ナポレオンパイのご予約・ご相談",
+        "焼き菓子ギフト・ココちゃんボックスの地方発送について",
+        "商品・原材料・アレルギーについてのお問い合わせ",
+        "取材・メディア掲載・タイアップ関連",
         "その他のお問い合わせ"
       ],
       form: {
@@ -318,17 +318,17 @@ export const siteConfig = {
         nameLabel: "お名前",
         namePlaceholder: "例：山田 太郎",
         phoneLabel: "お電話番号",
-        phonePlaceholder: "例：090-1234-5678",
+        phonePlaceholder: "例：0263-00-0000",
         emailLabel: "メールアドレス",
         emailPlaceholder: "example@example.com",
         messageLabel: "お問い合わせ内容",
-        messagePlaceholder: "ご希望の商品や数量、ご予算、お届け先のご指定、その他ご質問などをご記入ください。",
+        messagePlaceholder: "ご希望の商品、お受取日時、数量、ご用途（お誕生日など）、ご質問などをご記入ください。",
         submitBtnText: "送信する",
         cancelBtnText: "キャンセルして閉じる"
       },
       success: {
         title: "お問い合わせを受け付けました",
-        message: "内容を確認の上、担当者より1〜2営業日以内にご連絡差し上げます。今しばらくお待ちくださいませ。",
+        message: "内容を確認の上、担当者よりご連絡差し上げます。お急ぎの場合はお電話（0263-75-2134）にてご連絡いただけますと幸いです。",
         closeBtnText: "閉じる"
       }
     }
