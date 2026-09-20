@@ -27,6 +27,10 @@ export const siteConfig = {
     holidaysNote: "※祝日等の営業・振替や臨時休業は公式Instagramにてお知らせいたします",
     // 営業カレンダーで定休日に指定する曜日 (0:日曜, 1:月曜, 2:火曜, 3:水曜, 4:木曜, 5:金曜, 6:土曜)
     weeklyHolidayDays: [1, 2],
+    // 特別営業日（定休日の曜日でも営業する日: "YYYY-MM-DD" または "MM-DD"）
+    specialOpenDates: ["2026-09-21", "09-21"],
+    // 臨時休業日・振替休業日（通常営業の曜日でも休業する日: "YYYY-MM-DD" または "MM-DD"）
+    specialHolidayDates: ["2026-09-23", "09-23"],
     accessList: [
       "JR篠ノ井線「広丘駅」西口より車で約4分 / 徒歩約15分",
       "塩尻市道広丘東通線沿い（ヤマト運輸 広丘野村営業所近く）",

@@ -157,9 +157,15 @@ const { store: storeText } = siteConfig.content;
   </div>
 </section>
 
-<!-- Inject weekly holiday days for script -->
-<script define:vars={{ weeklyHolidayDays: store.weeklyHolidayDays }}>
-  window.__WEEKLY_HOLIDAYS__ = weeklyHolidayDays || [2, 3];
+<!-- Inject weekly holiday days and special dates for script -->
+<script define:vars={{
+  weeklyHolidayDays: store.weeklyHolidayDays,
+  specialOpenDates: store.specialOpenDates || [],
+  specialHolidayDates: store.specialHolidayDates || []
+}}>
+  window.__WEEKLY_HOLIDAYS__ = weeklyHolidayDays || [1, 2];
+  window.__SPECIAL_OPEN_DATES__ = specialOpenDates || [];
+  window.__SPECIAL_HOLIDAY_DATES__ = specialHolidayDates || [];
 </script>
 
 <script is:inline>
@@ -168,9 +174,24 @@ const { store: storeText } = siteConfig.content;
   let viewMonth = currentCalDate.getMonth();
 
   function isStoreHoliday(year, month, day) {
+    const monthStr = String(month + 1).padStart(2, '0');
+    const dayStr = String(day).padStart(2, '0');
+    const fullDateStr = `${year}-${monthStr}-${dayStr}`;
+    const shortDateStr = `${monthStr}-${dayStr}`;
+
+    const specialOpen = window.__SPECIAL_OPEN_DATES__ || [];
+    if (specialOpen.includes(fullDateStr) || specialOpen.includes(shortDateStr)) {
+      return false;
+    }
+
+    const specialHoliday = window.__SPECIAL_HOLIDAY_DATES__ || [];
+    if (specialHoliday.includes(fullDateStr) || specialHoliday.includes(shortDateStr)) {
+      return true;
+    }
+
     const d = new Date(year, month, day);
     const dayOfWeek = d.getDay(); // 0: Sun, 1: Mon, 2: Tue...
-    const holidays = window.__WEEKLY_HOLIDAYS__ || [2, 3];
+    const holidays = window.__WEEKLY_HOLIDAYS__ || [1, 2];
     return holidays.includes(dayOfWeek);
   }
 
