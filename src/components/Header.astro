@@ -209,6 +209,8 @@ const { store, navigation } = siteConfig;
   const headerWrapper = document.getElementById('header-wrapper');
   const announcementBar = document.getElementById('announcement-bar');
   const mainLogoImg = document.getElementById('main-logo-img');
+  const logoTitle = document.getElementById('logo-title');
+  const logoSubtitle = document.getElementById('logo-subtitle');
   const desktopNav = document.getElementById('desktop-nav');
   const contactBtn = document.getElementById('contact-btn');
   const mobileToggle = document.getElementById('mobile-menu-toggle');
@@ -225,9 +227,13 @@ const { store, navigation } = siteConfig;
     headerWrapper.classList.add('text-cream-50', 'bg-transparent');
     headerWrapper.classList.remove('text-noir-900', 'bg-cream-50/95', 'backdrop-blur-md', 'shadow-sm');
 
-    if (mainLogoImg) {
-      mainLogoImg.classList.add('brightness-0', 'invert');
-    }
+    mainLogoImg?.classList.add('brightness-0', 'invert');
+
+    logoTitle?.classList.add('text-cream-50');
+    logoTitle?.classList.remove('text-noir-900');
+
+    logoSubtitle?.classList.add('text-cream-200');
+    logoSubtitle?.classList.remove('text-stone-500');
 
     desktopNav.classList.add('text-cream-100');
     desktopNav.classList.remove('text-stone-700');
@@ -251,9 +257,13 @@ const { store, navigation } = siteConfig;
     headerWrapper.classList.remove('text-cream-50', 'bg-transparent');
     headerWrapper.classList.add('text-noir-900', 'bg-cream-50/95', 'backdrop-blur-md', 'shadow-sm');
 
-    if (mainLogoImg) {
-      mainLogoImg.classList.remove('brightness-0', 'invert');
-    }
+    mainLogoImg?.classList.remove('brightness-0', 'invert');
+
+    logoTitle?.classList.remove('text-cream-50');
+    logoTitle?.classList.add('text-noir-900');
+
+    logoSubtitle?.classList.remove('text-cream-200');
+    logoSubtitle?.classList.add('text-stone-500');
 
     desktopNav.classList.remove('text-cream-100');
     desktopNav.classList.add('text-stone-700');
