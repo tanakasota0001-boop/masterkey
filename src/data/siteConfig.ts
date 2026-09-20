@@ -271,7 +271,7 @@ export const siteConfig = {
       instagramBadge: "公式SNS",
       instagramTitleEn: "Social Media",
       instagramSubtitleJa: "Instagram・Threads・Xで日々の最新情報を配信中",
-      instagramCta: "Instagramを見る",
+      instagramCta: "最新情報を見る",
       instagramHoverBadge: "SNSを開く"
     },
 
