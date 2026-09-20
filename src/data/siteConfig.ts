@@ -156,31 +156,31 @@ export const siteConfig = {
       roleText: "Owner Chef & Pastry Craftsman"
     },
 
-    // Instagramギャラリー写真
+    // Instagramギャラリー写真（分け合うおいしさ・分かち合うしあわせセクションと同一画像）
     gallery: [
       {
-        url: "/images/specialite/napoleon-pie.jpg",
-        caption: "名物 ナポレオンパイ"
+        url: "/images/specialite/001.jpg",
+        caption: "2025 クリスマスケーキ"
       },
       {
-        url: "/images/gallery/gallery-showcase.jpg",
-        caption: "彩り豊かなショーケース"
+        url: "/images/specialite/002.jpg",
+        caption: "2025 クリスマスケーキ"
       },
       {
-        url: "/images/gallery/gallery-baked.jpg",
-        caption: "国産発酵バターの焼き菓子"
+        url: "/images/specialite/004.jpg",
+        caption: "ガトーショコラ"
       },
       {
-        url: "/images/specialite/anniversary-cake.jpg",
-        caption: "記念日アニバーサリーケーキ"
+        url: "/images/specialite/003.jpg",
+        caption: "デコレーションケーキ"
       },
       {
-        url: "/images/specialite/coco-gift.jpg",
-        caption: "愛猫ココちゃんのギフト缶"
+        url: "/images/specialite/005.jpg",
+        caption: "ひな祭り苺デコレーション 2026"
       },
       {
-        url: "/images/concept/concept-sub.jpg",
-        caption: "遊び心あふれる鍵型の小窓"
+        url: "/images/specialite/006.jpg",
+        caption: "フルーツタルト"
       }
     ]
   },
