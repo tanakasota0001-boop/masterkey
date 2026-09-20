@@ -104,15 +104,20 @@ const { specialite: specText } = siteConfig.content;
           )}
 
           <!-- Reservation Button -->
-          <div class="pt-2">
+          <div class="pt-2 space-y-2">
             <button
               type="button"
-              onclick="openContactModal('ホールケーキ・オーダーメイドのご予約・ご相談')"
+              onclick="openContactModal()"
               class="w-full sm:w-auto px-8 py-3.5 bg-noir-900 text-cream-50 text-xs font-sans tracking-widest uppercase hover:bg-gold-600 transition-colors font-medium rounded-sm shadow-sm inline-flex items-center justify-center gap-2 group"
             >
               <span>{specText.catalogBtn}</span>
               <svg class="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </button>
+            {specText.reservationNotice && (
+              <p class="text-[11px] font-serif-jp text-stone-500 tracking-wider">
+                {specText.reservationNotice}
+              </p>
+            )}
           </div>
         </div>
       </div>

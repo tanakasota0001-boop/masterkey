@@ -55,8 +55,8 @@ export const siteConfig = {
       { id: "store", labelEn: "Store", labelJa: "店舗情報", href: "#store" },
       { id: "news", labelEn: "News", labelJa: "お知らせ", href: "#news" }
     ],
-    contactBtnText: "お問い合わせ",
-    mobileContactBtnText: "ご相談・お問い合わせ"
+    contactBtnText: "ご予約（お電話）",
+    mobileContactBtnText: "お電話でのご予約・お問い合わせ"
   },
 
   // ==========================================
@@ -223,7 +223,8 @@ export const siteConfig = {
       heading: "分け合うおいしさ\n分かち合うしあわせ",
       desc: "誕生日、記念日、ウェディング、季節のお祝いに。東京の有名ホテルで腕を磨いたパティシエが、デザイン性と美味しさを兼ね備えた特別なホールケーキをお仕立てします。お客様のご希望のテーマやご用途に合わせて、ひとつひとつ心を込めてお作りいたします。",
       tags: ["# ホールケーキ", "# アニバーサリー", "# 誕生日ケーキ", "# オーダーメイド", "# 記念日"],
-      catalogBtn: "ご予約・ご相談について",
+      catalogBtn: "お電話でのご予約について",
+      reservationNotice: "※ホールケーキ・オーダーメイドのご予約はお電話のみにて承っております。",
       hoverBadge: "詳細を見る",
       menuLink: "商品ラインナップを見る"
     },
@@ -236,9 +237,9 @@ export const siteConfig = {
       hoverBadge: "詳しく見る",
       taxLabel: "（税込）",
       closeButtonText: "閉じる",
-      noticeBoxTitle: "【ホールケーキのご予約・ギフトの地方発送について】",
-      noticeBoxText: "ホールケーキやナポレオンパイのご予約は店頭またはお電話（0263-75-2134）にて承っております。愛猫ココちゃんのイラストをあしらった特製ギフトボックスや焼き菓子詰め合わせの地方発送もお気軽にご相談ください。",
-      ctaButton: "お問い合わせはこちら"
+      noticeBoxTitle: "【ホールケーキのご予約について】",
+      noticeBoxText: "ホールケーキやナポレオンパイのご予約はお電話（0263-75-2134）のみにて承っております。※Web・メール・SNSでのご予約受付は行っておりません。愛猫ココちゃんのギフトボックスや焼き菓子の地方発送についてもお気軽にお電話にてお問い合わせください。",
+      ctaButton: "お電話でのご予約・お問い合わせ"
     },
 
     // --- シェフ・工房セクション (About) ---
@@ -299,39 +300,29 @@ export const siteConfig = {
       backToTop: "Back to Top"
     },
 
-    // --- お問い合わせモーダル (Contact Modal) ---
+    // --- お電話でのご予約・お問い合わせモーダル (Reservation Guide Modal) ---
     contact: {
-      badge: "お問い合わせ・ご相談",
-      titleEn: "Contact",
-      subtitleJa: "ホールケーキのご相談・ギフトのご注文など",
-      desc: "ホールケーキやナポレオンパイのご予約、ギフトボックスのご注文、その他ご質問などお気軽にお問い合わせください。",
-      phoneNoticeTitle: "【お急ぎ・当日在庫のご確認・ホールケーキ予約はお電話にて】",
-      purposes: [
-        "ホールケーキ・ナポレオンパイのご予約・ご相談",
-        "焼き菓子ギフト・ココちゃんボックスの地方発送について",
-        "商品・原材料・アレルギーについてのお問い合わせ",
-        "取材・メディア掲載・タイアップ関連",
-        "その他のお問い合わせ"
+      badge: "お電話でのご予約・お問い合わせ",
+      titleEn: "Reservation by Phone",
+      subtitleJa: "ご予約・お取り置きはお電話のみにて承っております",
+      desc: "当店では確実なお渡しとお客様のご要望に寄り添ったお仕立てのため、ホールケーキや商品のご予約・お取り置きはお電話でのみ承っております。（Web・SNS DM・メールでのご予約受付は行っておりません）",
+      phoneNoticeTitle: "【ご予約・お問い合わせ専用ダイヤル】",
+      callButtonText: "お電話をかける",
+      hoursText: "受付時間：11:00 ～ 18:00（月曜・火曜 定休日）",
+      checklistTitle: "お電話の際にお伺いする内容",
+      checklistItems: [
+        { label: "ご希望の商品", detail: "ホールケーキの種類・サイズ（号数）、ナポレオンパイ、焼き菓子ギフトなど" },
+        { label: "お受取日時", detail: "ご来店予定の日時（営業時間 11:00〜18:00 内）" },
+        { label: "メッセージプレート・ローソク", detail: "お名前、記念日メッセージ、ローソクの本数など" },
+        { label: "お客様情報", detail: "お名前、当日ご連絡のつくお電話番号" }
       ],
-      form: {
-        purposeLabel: "お問い合わせ種別",
-        purposePlaceholder: "選択してください",
-        nameLabel: "お名前",
-        namePlaceholder: "例：山田 太郎",
-        phoneLabel: "お電話番号",
-        phonePlaceholder: "例：0263-00-0000",
-        emailLabel: "メールアドレス",
-        emailPlaceholder: "example@example.com",
-        messageLabel: "お問い合わせ内容",
-        messagePlaceholder: "ご希望の商品、お受取日時、数量、ご用途（お誕生日など）、ご質問などをご記入ください。",
-        submitBtnText: "送信する",
-        cancelBtnText: "キャンセルして閉じる"
-      },
-      success: {
-        title: "お問い合わせを受け付けました",
-        message: "内容を確認の上、担当者よりご連絡差し上げます。お急ぎの場合はお電話（0263-75-2134）にてご連絡いただけますと幸いです。",
-        closeBtnText: "閉じる"
-      }
+      noticeTitle: "ご予約に関するお願い",
+      noticeList: [
+        "ホールケーキ・特注ケーキは、できるだけお早めのご予約（数日前〜1週間前目安）をお願いいたします。",
+        "当日のお取り置きも在庫状況により承りますので、お気軽にお電話にてお確かめください。",
+        "作業中や接客中はお電話に出られない場合がございます。その際は誠に恐れ入りますが、少し時間を置いておかけ直しいただけますようお願い申し上げます。"
+      ],
+      closeBtnText: "閉じる"
     }
   }
 };
